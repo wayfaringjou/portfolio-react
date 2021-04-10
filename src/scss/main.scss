@@ -1,4 +1,7 @@
 @charset "UTF-8";
 
-@use './1-composition';
-@use './2-design-tokens';
+@use 'global';
+@use 'composition';
+@use 'utilities';
+@use 'blocks';
+@use 'exceptions';
