@@ -1,18 +1,18 @@
 import React, { ReactElement, ReactNode } from 'react';
+import {
+  greeting,
+  intro,
+  characteristic,
+  invitation,
+} from '../../../../data/presentation.json';
 
-const Presentation = ({
-  statement,
-}: {
-  statement: {
-    greeting: string;
-    techIntro: string;
-    characteristic: string;
-    invitation: string;
-  };
-}): ReactElement => (
+const Presentation = (): ReactElement => (
   <section>
-    <h1>{statement.greeting}</h1>
-    <button type="button">{statement.invitation}</button>
+    <h1>
+      <span>{greeting}</span>
+      <span>{intro}</span>
+    </h1>
+    <button type="button">{invitation}</button>
   </section>
 );
 
