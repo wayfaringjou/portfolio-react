@@ -1,0 +1,4 @@
+configurationset:
+  - configuration:
+      name: github_config
+      Authorization: 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

@@ -6,10 +6,18 @@ import Contact from './Contact';
 
 const Root = (): ReactElement => (
   <article id="portfolio-root">
-    <MainNav />
-    <Presentation />
-    <WorkOverview />
-    <Contact />
+    <div className="navbar-wrapper">
+      <div className="wrapper-intermediary">
+        <div className="navbar">
+          <MainNav />
+        </div>
+        <div className="content-box">
+          <Presentation />
+          <WorkOverview />
+          <Contact />
+        </div>
+      </div>
+    </div>
   </article>
 );
 
