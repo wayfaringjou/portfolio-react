@@ -1,0 +1,22 @@
+type Repo {
+  id: ID!
+  name: String!
+  html_url: String!
+  description: String
+  stargazers_count: Int
+  created_at: Date
+  updated_at: Date
+}
+
+type Query {
+  repos: [Repo]
+    @rest(
+      endpoint: "https://api.github.com/user/repos?sort=updated&type=owner&per_page=10"
+      configuration: "github_config"
+    )
+  reposByLogin(login: String!): [Repo]
+    @rest(
+      endpoint: "https://api.github.com/users/$login/repos?sort=updated&type=owner&per_page=10"
+      configuration: "github_config"
+    )
+}

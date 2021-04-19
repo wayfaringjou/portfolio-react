@@ -1,0 +1,40 @@
+@use './breakpoints' as *;
+
+.navbar-wrapper {
+  overflow: hidden;
+}
+
+.navbar-wrapper > * {
+  /* Select intermediary parent element */
+  display: flex;
+  flex-wrap: wrap-reverse;
+  /* The wrapper "pulls" children towards itself so theres margin only between child elements */
+  margin: calc(1rem / 2 * -1);
+}
+
+.navbar-wrapper > * > * {
+  /* Selects both elements (navbar and content) */
+  /* Adds margin between bar and content in horizontal or vertical layout */
+  margin: calc(1rem / 2);
+  flex-basis: 8ch;
+  flex-grow: 1;
+}
+
+.navbar-wrapper > * > :last-child {
+  /* Selectsts element after navbar */
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(85% - 1rem);
+}
+
+.navbar-wrapper .navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  @include mq(sm) {
+    position: unset;
+    width: unset;
+  }
+}
