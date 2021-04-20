@@ -1,0 +1,47 @@
+@use 'sass:list';
+
+@mixin text3d(
+  $x,
+  $y,
+  $depth,
+  $color,
+  $backdropX,
+  $backdropY,
+  $backdropBlur,
+  $backdropColor
+) {
+  $shadow: ();
+  @for $i from 1 through $depth {
+    $shadow: list.append(
+      $shadow,
+      list.append(($x * $i) ($y * $i) 0, #{$color}),
+      comma
+    );
+  }
+
+  $shadow: list.append(
+    $shadow,
+    $backdropX $backdropY $backdropBlur $backdropColor,
+    comma
+  );
+
+  text-shadow: $shadow;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  transition: 0.5s;
+  font-family: sans-serif;
+  position: relative;
+  @include text3d(
+    -0.25px,
+    -0.25px,
+    10,
+    #bbb,
+    0.2em,
+    0.15em,
+    0.15em,
+    rgba(0, 0, 0, 0.5)
+  );
+}
