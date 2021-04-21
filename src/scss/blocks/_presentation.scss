@@ -28,16 +28,15 @@
   text-shadow: $shadow;
 }
 
-h1 {
+h1 > .text3d {
   color: white;
-  font-size: 3rem;
   transition: 0.5s;
-  font-family: sans-serif;
   position: relative;
+  left: -25%;
   @include text3d(
-    -0.25px,
-    -0.25px,
-    10,
+    0.75px,
+    0.5px,
+    12,
     #bbb,
     0.2em,
     0.15em,

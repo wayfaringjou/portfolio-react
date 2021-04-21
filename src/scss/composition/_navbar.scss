@@ -1,37 +1,38 @@
 @use './breakpoints' as *;
+@use '../global/design-tokens/dimensions';
 
 .navbar-wrapper {
   overflow: hidden;
 }
 
-.navbar-wrapper > * {
+.navbar-wrapper {
   /* Select intermediary parent element */
   display: flex;
   flex-wrap: wrap-reverse;
   /* The wrapper "pulls" children towards itself so theres margin only between child elements */
-  margin: calc(1rem / 2 * -1);
+  margin: 0 /* calc(1rem / 2 * -1) */;
 }
 
-.navbar-wrapper > * > * {
+.navbar-wrapper > * {
   /* Selects both elements (navbar and content) */
   /* Adds margin between bar and content in horizontal or vertical layout */
-  margin: calc(1rem / 2);
-  flex-basis: 8ch;
+  margin: 0 /* calc(1rem / 2) */;
+  flex-basis: (dimensions.$B - (dimensions.$B * dimensions.$Phi)) * 1vw;
   flex-grow: 1;
+  overflow: hidden;
 }
 
-.navbar-wrapper > * > :last-child {
+.navbar-wrapper > :last-child {
   /* Selectsts element after navbar */
   flex-basis: 0;
   flex-grow: 999;
-  min-width: calc(85% - 1rem);
+  min-width: 20%;
 }
 
 .navbar-wrapper .navbar {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: black;
   color: white;
   @include mq(sm) {
     position: unset;

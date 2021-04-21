@@ -5,18 +5,13 @@ import WorkOverview from './WorkOverview';
 import Contact from './Contact';
 
 const Root = (): ReactElement => (
-  <article id="portfolio-root">
-    <div className="navbar-wrapper">
-      <div className="wrapper-intermediary">
-        <div className="navbar">
-          <MainNav />
-        </div>
-        <div className="content-box">
-          <Presentation />
-          <WorkOverview />
-          <Contact />
-        </div>
-      </div>
+  <article id="portfolio-root" className="navbar-wrapper">
+    <MainNav />
+    <div className="main-grid">
+      <section className="bg-4">Skills maybe?</section>
+      <Presentation />
+      <WorkOverview />
+      <Contact />
     </div>
   </article>
 );
