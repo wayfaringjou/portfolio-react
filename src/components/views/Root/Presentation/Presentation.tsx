@@ -42,12 +42,7 @@ const Presentation = (): ReactElement => {
 
   return (
     <section className="ratio-blocks-wrapper">
-      <div className="bg-3">
-        <h1>
-          <span className="text3d">
-            Let&apos;s build something great together!
-          </span>
-        </h1>
+      <div className="">
         <h2>
           <span>Hi! I&apos;m Joel, I&apos;m a </span>
         </h2>
@@ -56,7 +51,7 @@ const Presentation = (): ReactElement => {
         </h3>
         <button type="button">Let&apos;s work together</button>
       </div>
-      <div className="bg-2">Test</div>
+      <div className="">Test</div>
     </section>
   );
 };

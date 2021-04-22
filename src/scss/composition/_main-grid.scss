@@ -1,0 +1,39 @@
+@use '../global/design-tokens/dimensions';
+@use '../global/design-tokens/colors';
+@use 'sass:map';
+@use 'sass:color';
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1vw * (dimensions.$B / dimensions.$phi) 1vw * dimensions.$A;
+  grid-template-rows: 1vh * dimensions.$A 1vh * dimensions.$B;
+}
+
+.main-grid > * {
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: colors.$accent;
+  background-image: linear-gradient(
+    to bottom,
+    colors.$sky 0vh,
+    colors.$sky 1vh * dimensions.$A,
+    colors.$blue 1vh * dimensions.$A,
+    colors.$blue 100vh
+  );
+  color: #{map.get(colors.$harmonious, '500')} !important;
+}
+
+.main-grid > :nth-child(1) {
+  background-color: color.mix(colors.$sky, colors.$blue, 50%);
+}
+.main-grid > :nth-child(2) {
+  background-color: colors.$blue;
+}
+.main-grid > :nth-child(3) {
+  background-color: color.mix(colors.$blue, colors.$sand, 50%);
+}
+.main-grid > :nth-child(4) {
+  background-color: colors.$sand;
+}

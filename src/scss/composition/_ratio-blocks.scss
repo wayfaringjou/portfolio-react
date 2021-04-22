@@ -1,0 +1,17 @@
+@use '../global/design-tokens/dimensions';
+
+.ratio-blocks-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ratio-blocks-wrapper > * {
+  flex-basis: 100vw / dimensions.$phi;
+  flex-grow: 1;
+}
+
+.ratio-blocks-wrapper > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: (25%);
+}

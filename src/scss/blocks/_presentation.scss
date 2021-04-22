@@ -28,11 +28,26 @@
   text-shadow: $shadow;
 }
 
-h1 > .text3d {
+.gradient-shape::after {
+  content: '';
+  border-radius: 44% 56% 70% 30% / 25% 30% 70% 75%;
+  background-color: brown;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  z-index: 1;
+}
+
+.gradient-shape > * {
+  z-index: 100;
+}
+
+.text3d {
   color: white;
   transition: 0.5s;
-  position: relative;
-  left: -25%;
+  position: absolute;
+  left: 0;
   @include text3d(
     0.75px,
     0.5px,
