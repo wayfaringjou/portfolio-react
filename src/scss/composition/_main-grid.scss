@@ -5,12 +5,19 @@
 
 .main-grid {
   display: grid;
-  grid-template-columns: 1vw * (dimensions.$B / dimensions.$phi) 1vw * dimensions.$A;
-  grid-template-rows: 1vh * dimensions.$A 1vh * dimensions.$B;
+  grid-template-columns: 1vw * dimensions.$A 1vw * dimensions.$B;
+  grid-template-rows: 1vh * dimensions.$A 1vh * (
+      dimensions.$B - (dimensions.$B / dimensions.$phi)
+    ) 100vh;
 }
 
 .main-grid > * {
   overflow: hidden;
+}
+
+.sticky-test {
+  position: sticky;
+  top: 0;
 }
 
 .navbar {
@@ -25,6 +32,10 @@
   color: #{map.get(colors.$harmonious, '500')} !important;
 }
 
+.main-grid > * {
+  padding: 1rem;
+}
+
 .main-grid > :nth-child(1) {
   background-color: color.mix(colors.$sky, colors.$blue, 50%);
 }
@@ -35,5 +46,12 @@
   background-color: color.mix(colors.$blue, colors.$sand, 50%);
 }
 .main-grid > :nth-child(4) {
+  background-color: colors.$sand;
+}
+
+.main-grid > :nth-child(5) {
+  background-color: color.mix(colors.$blue, colors.$sand, 50%);
+}
+.main-grid > :nth-child(6) {
   background-color: colors.$sand;
 }

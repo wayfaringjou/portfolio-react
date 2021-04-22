@@ -41,18 +41,27 @@ const Presentation = (): ReactElement => {
   }, [fetchGraphQL]);
 
   return (
-    <section className="ratio-blocks-wrapper">
-      <div className="">
-        <h2>
-          <span>Hi! I&apos;m Joel, I&apos;m a </span>
-        </h2>
-        <h3>
-          <span>{intro}</span>
-        </h3>
-        <button type="button">Let&apos;s work together</button>
-      </div>
-      <div className="">Test</div>
-    </section>
+    <>
+      <section className="ratio-blocks-wrapper">
+        <div className="">
+          <h2>
+            <span>{/* Hi! I&apos;m Joel, I&apos;m a */}</span>
+          </h2>
+          <h3>
+            <span>{/* intro */}</span>
+          </h3>
+          {/*
+          <button type="button">Let&apos;s work together</button>
+           */}
+        </div>
+      </section>
+
+      <section className="shape-3d">
+        <h1 className="text3d">
+          {/* Let&apos;s build something great together! */}
+        </h1>
+      </section>
+    </>
   );
 };
 
