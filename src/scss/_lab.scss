@@ -1,0 +1,428 @@
+@use './global/design-tokens/dimensions';
+@use './global/design-tokens/colors';
+@use 'sass:map';
+@use 'sass:color';
+@use 'sass:list';
+/*
+
+.main-grid > :nth-child(1) {
+  background-color: color.mix(colors.$sky, colors.$blue, 50%);
+}
+.main-grid > :nth-child(2) {
+  background-color: colors.$blue;
+}
+.main-grid > :nth-child(3) {
+  background-color: color.mix(colors.$blue, colors.$sand, 50%);
+}
+.main-grid > :nth-child(4) {
+  background-color: colors.$sand;
+}
+
+.main-grid > :nth-child(5) {
+  background-color: color.mix(colors.$blue, colors.$sand, 50%);
+}
+.main-grid > :nth-child(6) {
+  background-color: colors.$sand;
+}
+
+*/
+
+.sticky-test {
+  position: sticky;
+  top: 0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1vw * dimensions.$A 1vw * dimensions.$B;
+  grid-template-rows: 1vh * dimensions.$A 1vh * (
+      dimensions.$B - (dimensions.$B / dimensions.$phi)
+    ) 100vh;
+}
+
+.main-grid > * {
+}
+
+@mixin text3d(
+  $x,
+  $y,
+  $depth,
+  $color,
+  $backdropX,
+  $backdropY,
+  $backdropBlur,
+  $backdropColor
+) {
+  $shadow: ();
+  @for $i from 1 through $depth {
+    $shadow: list.append(
+      $shadow,
+      list.append(($x * $i) ($y * $i) 0, #{$color}),
+      comma
+    );
+  }
+
+  $shadow: list.append(
+    $shadow,
+    $backdropX $backdropY $backdropBlur $backdropColor,
+    comma
+  );
+
+  text-shadow: $shadow;
+}
+
+.gradient-shape::after {
+  content: '';
+  border-radius: 44% 56% 70% 30% / 25% 30% 70% 75%;
+  background-color: brown;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+}
+
+.gradient-shape > * {
+  z-index: 1;
+}
+
+.shape-3d::after {
+  content: '';
+  background: yellow;
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.building-blocks {
+  position: relative;
+  background: #fbe806;
+  width: 16vmin;
+  -webkit-transform: scale(0.75) rotateY(-30deg) rotateX(45deg)
+    translateZ(4.5rem);
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.6s ease;
+}
+
+.building-blocks:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #f96b59;
+  -webkit-transform: translateZ(4rem);
+  transform: translateZ(4rem);
+  transition: transform 0.6s ease;
+}
+
+.building-blocks:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f96b59;
+  -webkit-transform: translateZ(-4rem);
+  transform: translateZ(-4rem);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.6s ease;
+}
+
+.text3d {
+  transform: perspective(75em) rotatey(-45deg);
+  color: white;
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  @include text3d(
+    0.75px,
+    0.5px,
+    12,
+    #bbb,
+    0.2em,
+    0.15em,
+    0.15em,
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.cover > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cover > :first-child:not(h1) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(h1) {
+  margin-bottom: 0;
+}
+
+.cover > h1 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.with-sidebar {
+}
+
+.with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.with-sidebar > * > * {
+  flex-grow: 1;
+  flex-basis: 38%;
+}
+
+.with-sidebar > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--s1));
+}
+
+.building-schema {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f3e04e;
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+.building-schema-t > :nth-child(1) {
+  margin: 0;
+  height: 260px;
+  width: 300px;
+  position: absolute;
+  background-color: #f3e04e;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+}
+
+.building-schema-t > :nth-child(2) {
+  margin: 0;
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  background-color: #f37d4e;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+}
+
+.building-schema-t > :nth-child(1) :hover + :nth-of-type(2) {
+  background-color: brown;
+}
+
+.building-schema-x > :nth-child(1) {
+  margin: 0;
+  height: 6rem;
+  width: 20rem;
+  position: absolute;
+  border-top: 4ch solid;
+  border-bottom: 4ch solid;
+  /* background-color: #f3e04e; */
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(-3.5rem);
+  /* transform-origin: 50% 100%; */
+  /* transform-style: preserve-3d; */
+}
+
+.building-schema-x > :nth-child(2) {
+  margin: 0;
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  background-color: #864ef3;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: scale(0.25) rotateY(-30deg) rotateX(45deg) translateZ(3.5rem)
+    translateX(-13rem) translateY(-2rem);
+  /* transform-origin: 50% 100%; */
+  /* transform-style: preserve-3d; */
+  border-radius: 50%;
+}
+
+.building-schema-x > :nth-child(2) {
+  margin: 0;
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  background-color: #864ef3;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: scale(0.25) rotateY(-30deg) rotateX(45deg) translateZ(3.5rem)
+    translateX(-13rem) translateY(-2rem);
+  /* transform-origin: 50% 100%; */
+  /* transform-style: preserve-3d; */
+  border-radius: 50%;
+}
+
+.layered-layout {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: #bfbfbf;
+}
+
+.layered-layout > * {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all ease 600ms;
+}
+
+.layered-layout :nth-child(6) {
+  background-color: cornflowerblue;
+  height: 55%;
+  width: 58%;
+  bottom: 8px;
+  right: 8px;
+}
+
+.layered-layout :nth-child(5) {
+  background-color: cornflowerblue;
+  height: 55%;
+  width: 30%;
+  bottom: 8px;
+  left: 8px;
+}
+
+.layered-layout :nth-child(4) {
+  background-color: cornflowerblue;
+  height: 30%;
+  width: 30%;
+  border-radius: 50%;
+  top: 8px;
+  left: 8px;
+}
+
+.layered-layout :nth-child(3) {
+  background-color: cornflowerblue;
+  height: 12px;
+  width: 58%;
+  right: 8px;
+  top: 20px;
+}
+
+.layered-layout :nth-child(2) {
+  background-color: cornflowerblue;
+  height: 12px;
+  width: 58%;
+  right: 8px;
+  top: 46px;
+}
+
+.layered-layout :nth-child(1) {
+  background-color: darkslategrey;
+  height: 38%;
+  width: 100%;
+}
+
+.layered-layout {
+  transform: perspective(1200px) rotateX(58deg) rotateY(-13deg) rotateZ(22deg)
+    translateX(35px) translateY(0px) translateZ(0px);
+}
+
+.layered-layout :nth-child(1) {
+  transform: perspective(1200px) rotateX(58deg) rotateY(-13deg) rotateZ(22deg)
+    translateX(35px) translateY(0px) translateZ(10px);
+}
+
+/* =========================
+   3D LAYER EFFECT
+   ========================= */
+
+.final__layers {
+  position: relative;
+  min-height: 638px;
+  max-width: 360px;
+}
+
+.final__layers img {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  transition: all ease 1600ms;
+  transform-style: preserve-3d;
+}
+
+.final__layers:hover img {
+  /*
+  The "perspective" CSS function (or property) enables 3D space and produces the illustion of "distance" between the Z plane and the user.
+
+  Smaller value = exaggerated effect
+  Larger value = subtle effect
+  */
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0px) translateZ(180px);
+}
+
+.final__layers img.mid {
+  width: 320px;
+  left: 20px;
+}
+
+.final__layers img.top {
+  width: 300px;
+  left: 30px;
+  top: -5px;
+}
+
+.final__layers img.tippy {
+  width: 280px;
+  top: -150px;
+  left: 40px;
+}
+
+.final__layers:hover img.mid {
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0px) translateZ(240px);
+}
+
+.final__layers:hover img.top {
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0px) translateZ(280px);
+}
+
+.final__layers:hover img.tippy {
+  transform: perspective(1200px) rotateX(60deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(-20px) translateY(20px) translateZ(260px);
+}

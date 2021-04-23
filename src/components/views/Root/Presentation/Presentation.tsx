@@ -1,5 +1,8 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import fetchGraphQL from '../../../../utils/fetchGraphQL';
+import backdrop from '../../../../img/layered-schema/backdrop.svg';
+import layout from '../../../../img/layered-schema/layout.svg';
+import content from '../../../../img/layered-schema/content.svg';
 
 /*
 {
@@ -42,24 +45,41 @@ const Presentation = (): ReactElement => {
 
   return (
     <>
-      <section className="ratio-blocks-wrapper">
+      <section className="">
         <div className="">
-          <h2>
-            <span>{/* Hi! I&apos;m Joel, I&apos;m a */}</span>
-          </h2>
-          <h3>
-            <span>{/* intro */}</span>
-          </h3>
-          {/*
-          <button type="button">Let&apos;s work together</button>
-           */}
+          <div className="final__layers">
+            {/*
+            <div className="" />
+            <div className="" />
+            <div className="" />
+            <div className="" />
+            <div className="" />
+            <div className="" />
+            */}
+            <img src={backdrop} alt="back layer" className="back" />
+            <img src={layout} alt="mid layer" className="mid" />
+            <img src={content} alt="top layer" className="top" />
+          </div>
+          <div>
+            <h1 className="">Let&apos;s build something great together!</h1>
+          </div>
         </div>
       </section>
 
-      <section className="shape-3d">
-        <h1 className="text3d">
-          {/* Let&apos;s build something great together! */}
-        </h1>
+      <section className="">
+        <>
+          <div>
+            <h2>
+              <span>Hi! I&apos;m Joel, I&apos;m a</span>
+            </h2>
+            <h3>
+              <span>{/* intro */}</span>
+            </h3>
+            {/*
+          <button type="button">Let&apos;s work together</button>
+        */}
+          </div>
+        </>
       </section>
     </>
   );
