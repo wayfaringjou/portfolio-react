@@ -45,23 +45,17 @@ const Presentation = (): ReactElement => {
 
   return (
     <>
-      <section className="">
-        <div className="">
-          <div className="final__layers">
-            {/*
-            <div className="" />
-            <div className="" />
-            <div className="" />
-            <div className="" />
-            <div className="" />
-            <div className="" />
-            */}
-            <img src={backdrop} alt="back layer" className="back" />
-            <img src={layout} alt="mid layer" className="mid" />
-            <img src={content} alt="top layer" className="top" />
+      <section className="cover bg-5">
+        <div className="with-adjacent centered">
+          <div className="bg-1">
+            <img src={backdrop} alt="img" />
           </div>
-          <div>
+          <div className="">
             <h1 className="">Let&apos;s build something great together!</h1>
+            <p>
+              Lorem ipsum
+            </p>
+            <button type="button">hire me</button>
           </div>
         </div>
       </section>
