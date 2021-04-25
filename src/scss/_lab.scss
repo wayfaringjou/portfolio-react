@@ -350,7 +350,6 @@
 /* =========================
    3D LAYER EFFECT
    ========================= */
-
 .final__layers {
   position: relative;
   min-height: 638px;
@@ -421,29 +420,4 @@
 .with-adjacent > :last-child {
   flex-basis: 0;
   flex-grow: 999;
-}
-
-.cover {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  padding: 1rem;
-}
-
-.cover > * {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.cover > :first-child:not(.centered) {
-  margin-top: 0;
-}
-
-.cover > :last-child:not(.centered) {
-  margin-botttom: 0;
-}
-
-.cover > .centered {
-  margin-top: auto;
-  margin-bottom: auto;
 }
