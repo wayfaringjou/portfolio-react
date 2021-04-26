@@ -1,0 +1,20 @@
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  @supports (width: min(250px, 100%)) {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
+
+.project-card:last-child:nth-last-child(odd) {
+  grid-column: auto / span 2;
+}
+
+.project-card:last-child:nth-last-child(even),
+.project-card:first-child:nth-last-child(even) ~ .project-card {
+  grid-column: auto / span 1;
+}
+
+.project-card {
+  padding: 1rem;
+}

@@ -33,19 +33,6 @@
   top: 0;
 }
 
-.main-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-@include mq(sm) {
-  .main-grid {
-    grid-template-columns: 1vw * dimensions.$A 1vw * dimensions.$B;
-    grid-template-rows: 1vh * dimensions.$A 1vh * (
-        dimensions.$B - (dimensions.$B / dimensions.$phi)
-      ) 100vh;
-  }
-}
-
 .main-grid > * {
 }
 

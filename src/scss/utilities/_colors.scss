@@ -42,3 +42,7 @@
     hsl(0, 0%, 0%) 100%
   );
 }
+
+.bg-dark {
+  background-color: #{map.get(colors.$harmonious, '500')};
+}

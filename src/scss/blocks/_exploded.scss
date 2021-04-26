@@ -19,7 +19,7 @@
       translateZ($z * 1px);
   }
 
-  @for $i from 2 through $layers {
+  @for $i from 3 through $layers {
     $adjustedX: 0;
     $adjustedY: 0;
     $adjustedZ: 0;
@@ -48,7 +48,7 @@
   }
 }
 
-@include explode(32, 0, 0, 20, 30, -10, 0, 0, 18, 6);
+@include explode(32, 0, 0, 20, 30, -10, 0, 0, 12, 6);
 
 .exploded:hover img {
   transform: scale(1);

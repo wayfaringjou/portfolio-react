@@ -65,9 +65,7 @@ const Presentation = (): ReactElement => {
           </div>
           <div className="">
             <h1 className="">Let&apos;s build something great together!</h1>
-            <p>
-              Lorem ipsum
-            </p>
+            <p>Lorem ipsum</p>
             <button type="button">hire me</button>
           </div>
         </div>
@@ -77,10 +75,10 @@ const Presentation = (): ReactElement => {
         <>
           <div>
             <h2>
-              <span>Hi! I&apos;m Joel, I&apos;m a</span>
+              <span>Hi! I&apos;m Joel,</span>
             </h2>
             <h3>
-              <span>{/* intro */}</span>
+              <span>{intro}</span>
             </h3>
             {/*
           <button type="button">Let&apos;s work together</button>
