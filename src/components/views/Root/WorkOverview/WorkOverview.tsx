@@ -66,15 +66,23 @@ const WorkOverview = (): ReactElement => {
               </header>
               <figure>
                 <img alt={node.name} src={node.openGraphImageUrl} />
-                <figcaption>{node.description}</figcaption>
+                <figcaption>
+                  {node.description}
+                  <button type="button">View Details</button>
+                </figcaption>
+                <div className="overlay bg-5" />
               </figure>
-              <button type="button">View Details</button>
             </article>
           ))}
         </section>
       </section>
       <section className="bg-4">
-        Skills
+        <h3>Front-end Developer</h3>
+        <p>Languages I speak</p>
+        <p>Tools I Use</p>
+        <h3>Back-end Developer</h3>
+        <p>Languages</p>
+        <p>Tools</p>
       </section>
     </>
   );
