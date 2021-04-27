@@ -18,6 +18,18 @@ export type githubPinnedRepos = {
             homepageUrl: string,
             url: string,
             openGraphImageUrl: string,
+            languages: {
+              nodes: Array<{
+                name: string,
+              }>
+            },
+            repositoryTopics: {
+              nodes: Array<{
+                topic: {
+                  name: string,
+                }
+              }>
+            }
           }
         }>
       }

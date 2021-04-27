@@ -1,9 +1,10 @@
 .card-grid {
   display: grid;
-  gap: 1rem;
-  @supports (width: min(250px, 100%)) {
+  gap: 2rem;
+  @supports (width: min((250px), 100%)) {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
+  padding: 2rem;
 }
 
 .project-card:last-child:nth-last-child(odd) {
@@ -16,7 +17,6 @@
 }
 
 .project-card {
-  padding: 1rem;
 }
 
 .project-card header {
@@ -65,4 +65,27 @@
 
 .project-card figure:hover figcaption {
   opacity: 1;
+}
+
+.tech-stack {
+  overflow: hidden;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tech-stack > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(0.75rem / #{2 * -1});
+}
+
+.tech-stack .tech-pill {
+  margin: calc(0.75rem / #{2});
+  background-color: #fcfcfc;
+  padding: 2px 4px;
+  font-size: 12px;
+  text-transform: capitalize;
+  border-radius: 2px;
 }

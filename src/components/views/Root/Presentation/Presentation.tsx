@@ -65,8 +65,8 @@ const Presentation = (): ReactElement => {
           </div>
           <div className="">
             <h1 className="">Let&apos;s build something great together!</h1>
-            <p>Lorem ipsum</p>
-            <button type="button">hire me</button>
+            <p>Looking for a new member for your team?</p>
+            <button type="button">Get in touch</button>
           </div>
         </div>
       </section>
