@@ -54,15 +54,19 @@ const Presentation = (): ReactElement => {
   return (
     <>
       <section className="cover bg-2">
-        <div className="with-adjacent centered">
-          <div className="exploded">
-            <img src={background} alt="img" />
-            <img src={backgroundOutline} alt="img" />
-            <img src={layout} alt="img" />
-            <img src={layoutOutline} alt="img" />
-            <img src={content} alt="img" />
-            <img src={contentOutline} alt="img" />
-          </div>
+        <div className="with-adjacent center">
+          <section className="illustration">
+            <div className="backdrop" />
+            <div className="exploded">
+              <img src={background} alt="img" />
+              <img src={backgroundOutline} alt="img" />
+              <img src={layout} alt="img" />
+              <img src={layoutOutline} alt="img" />
+              <img src={content} alt="img" />
+              <img src={contentOutline} alt="img" />
+            </div>
+            <div className="shape" />
+          </section>
           <div className="">
             <h1 className="">Let&apos;s build something great together!</h1>
             <p>Looking for a new member for your team?</p>
