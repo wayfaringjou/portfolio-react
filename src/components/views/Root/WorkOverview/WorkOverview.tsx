@@ -88,7 +88,7 @@ const WorkOverview = (): ReactElement => {
               <figure>
                 <img
                   alt={node.name}
-                  src={`${node.url}/raw/main/screens/landing.jpg`}
+                  src={`${node.url}/raw/main/screens/portfolio.png`}
                 />
                 <figcaption>
                   <header>

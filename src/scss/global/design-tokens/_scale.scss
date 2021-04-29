@@ -1,0 +1,32 @@
+@use 'sass:map';
+
+$ratios: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+  perfect-fifth: 1.5,
+  golden-ratio: 1.618,
+);
+
+$selectedRatio: 'golden-ratio';
+
+@mixin generateScale($ratio) {
+  --ratio: #{map.get($ratios, $ratio)};
+
+  @for $i from -5 through -1 {
+    $dividend: --s#{$i + 1};
+    --s#{$i}: calc(var(#{$dividend}) / var(--ratio));
+  }
+  --s0: 1rem;
+  @for $i from 1 through 5 {
+    $factor: --s#{$i - 1};
+    --s#{$i}: calc(var(#{$factor}) * var(--ratio));
+  }
+}
+
+:root {
+  @include generateScale($selectedRatio);
+}

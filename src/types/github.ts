@@ -3,6 +3,7 @@ export type githubBio = {
     viewer: {
       name: string,
       bio: string,
+      avatarUrl: string,
     }
   }
 }

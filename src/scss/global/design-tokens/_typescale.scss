@@ -1,0 +1,27 @@
+@use 'scale';
+@use '../../composition/breakpoints';
+@use 'sass:map';
+
+@mixin generateTypeScale($ratio) {
+  --ts-ratio: #{map.get(scale.$ratios, $ratio)};
+
+  @for $i from -2 through -1 {
+    $dividend: --s#{$i + 1};
+    --ts#{$i}: calc(var(#{$dividend}) / var(--ts-ratio));
+  }
+  --ts0: 1rem;
+  @for $i from 1 through 5 {
+    $factor: --s#{$i - 1};
+    --ts#{$i}: calc(var(#{$factor}) * var(--ts-ratio));
+  }
+}
+
+:root {
+  @include generateTypeScale(scale.$selectedRatio);
+}
+
+@include breakpoints.mq(lg) {
+  :root {
+    --ts-ratio: #{map.get(scale.$ratios, 'major-third')};
+  }
+}

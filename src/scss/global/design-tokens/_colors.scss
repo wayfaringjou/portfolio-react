@@ -12,3 +12,18 @@ $harmonious: (
   '500': #0e2d4e,
 );
 $dark: #333;
+
+$colors: (
+  primary: (
+    400: #00c1dc,
+  ),
+  neutral: (
+    400: #faebd7,
+  ),
+  accent: (
+    400: #f3e04e,
+  ),
+  feedback: (
+    error: red,
+  ),
+);

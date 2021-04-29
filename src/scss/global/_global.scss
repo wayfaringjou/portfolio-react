@@ -1,0 +1,9 @@
+@use 'design-tokens';
+
+:root {
+  @each $color, $shades in design-tokens.$colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
