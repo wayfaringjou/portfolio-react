@@ -8,8 +8,10 @@
 @include breakpoints.mq(sm) {
   .main-grid {
     grid-template-columns: 1vw * dimensions.$A 1vw * dimensions.$B;
+    /*
     grid-template-rows: 1vh * dimensions.$A 1vh * (
         dimensions.$B - (dimensions.$B / dimensions.$phi)
       );
+      */
   }
 }

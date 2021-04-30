@@ -1,0 +1,17 @@
+.box {
+  padding: var(--s1);
+  border: 0 solid;
+  outline: thin solid transparent;
+  outline-offset: calc(var(--s-4) * -1);
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-neutral-100);
+}
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}

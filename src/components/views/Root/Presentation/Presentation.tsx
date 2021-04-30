@@ -56,35 +56,35 @@ const Presentation = (): React.ReactElement => {
 
   return (
     <>
-      <section className="banner">
-        <section className="illustration">
-          <div className="backdrop" />
-          <figure className="exploded">
-            <img src={background} alt="img" />
-            <img src={backgroundOutline} alt="img" />
-            <img src={layout} alt="img" />
-            <img src={layoutOutline} alt="img" />
-            <img src={content} alt="img" />
-            <img src={contentOutline} alt="img" />
-          </figure>
-          <div className="shape" />
-        </section>
-        <section className="invitation">
-          <h1 className="">Let&apos;s build something great together!</h1>
-          <p>Looking for a new member for your team?</p>
-          <button type="button">Get in touch</button>
-        </section>
+      <section className="[ banner ] [ with-sidebar ]">
+        <div className="[ with-sidebar-intermediate ]">
+          <section className="[ illustration ]">
+            <div className="[ backdrop ]" />
+            <div className="[ shape ] [  ]" />
+            <figure className="exploded">
+              <img src={background} alt="img" />
+              <img src={backgroundOutline} alt="img" />
+              <img src={layout} alt="img" />
+              <img src={layoutOutline} alt="img" />
+              <img src={content} alt="img" />
+              <img src={contentOutline} alt="img" />
+            </figure>
+          </section>
+          <section className="[ invitation ]">
+            <h1 className="">Let&apos;s build something great together!</h1>
+            <p>Looking for a new member for your team?</p>
+            <button type="button">Get in touch</button>
+          </section>
+        </div>
       </section>
 
-      <section className="intro">
-        <div className="card">
-          <img className="circle" alt="It's Joel" src={avatar} />
-          <h2 className="card-title">
-            Hi! I&apos;m Joel,
-          </h2>
-          <p className="card-caption">
-            {intro}
-          </p>
+      <section className="[ intro ] [ box stack ]">
+        <div className="[ frame ]">
+          <img className="[ circle ]" alt="It's Joel" src={avatar} />
+        </div>
+        <div className="[ box ]">
+          <h2 className="card-title">Hi! I&apos;m Joel,</h2>
+          <p className="card-caption">{intro}</p>
         </div>
       </section>
     </>
