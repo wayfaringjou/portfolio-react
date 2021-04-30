@@ -1,12 +1,15 @@
 @use 'sass:map';
+@use '../composition/breakpoints';
 
 html {
-  font-size: 100%;
-} /*16px*/
+  font-size: 100%; /*16px*/
+}
 
 body {
-  line-height: var(--ts-ratio);
+  line-height: var(--ratio);
   font-size: var(--ts0);
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 h1,
@@ -17,7 +20,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 400;
-  line-height: var(--ts-ratio) em;
+  line-height: var(--ratio);
 }
 
 h1 {
@@ -60,8 +63,38 @@ h6 {
   font-size: calc(var(--ts0) + var(--ts-2));
 }
 
-.subtitle-1 {
+button {
+  font-weight: 500;
+  font-size: var(--ts-1);
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.subtitle1 {
   font-size: var(--ts0);
   font-weight: 400;
   letter-spacing: 0.15px;
+}
+
+.subtitle2 {
+  font-size: var(--ts-1);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.body2 {
+  font-size: var(--ts-1);
+}
+
+.caption {
+  font-size: var(--ts-2);
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.overline {
+  font-size: var(--ts-2);
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  text-transform: uppercase;
 }

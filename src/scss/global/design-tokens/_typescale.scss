@@ -1,27 +1,56 @@
 @use 'scale';
 @use '../../composition/breakpoints';
 @use 'sass:map';
+@use 'sass:math';
 
-@mixin generateTypeScale($ratio) {
+$fundFreq: 1rem;
+$noteRangeMax: 5;
+$noteRangeMin: -3;
+/* 
+Formula from: https://spencermortensen.com/articles/typographic-scale/ 
+*/
+@function frequency(
+  $noteInterval,
+  $scaleRatio,
+  $fundamentalFrequency,
+  $ithNote
+) {
+  $note: $ithNote / $noteInterval;
+  $noteScaledByRatio: math.pow($scaleRatio, $note);
+  $noteFrequency: $fundamentalFrequency * $noteScaledByRatio;
+
+  @return $noteFrequency;
+}
+
+@mixin generateTypeScale($ratio, $noteInt) {
   --ts-ratio: #{map.get(scale.$ratios, $ratio)};
+  $tsRatio: map.get(scale.$ratios, $ratio);
 
-  @for $i from -2 through -1 {
-    $dividend: --s#{$i + 1};
-    --ts#{$i}: calc(var(#{$dividend}) / var(--ts-ratio));
+  @for $i from $noteRangeMin through -1 {
+    --ts#{$i}: #{frequency($noteInt, $tsRatio, $fundFreq, $i)};
   }
-  --ts0: 1rem;
-  @for $i from 1 through 5 {
-    $factor: --s#{$i - 1};
-    --ts#{$i}: calc(var(#{$factor}) * var(--ts-ratio));
+  --ts0: #{$fundFreq};
+  @for $i from 1 through $noteRangeMax {
+    --ts#{$i}: #{frequency($noteInt, $tsRatio, $fundFreq, $i)};
   }
 }
 
 :root {
-  @include generateTypeScale(scale.$selectedRatio);
+  @include generateTypeScale('classic-typographic', 4);
 }
 
-@include breakpoints.mq(lg) {
+@include breakpoints.mq(sm) {
   :root {
-    --ts-ratio: #{map.get(scale.$ratios, 'major-third')};
+    @include generateTypeScale('golden-ratio', 2);
+  }
+}
+
+@include breakpoints.mq(md) {
+  :root {
+  }
+}
+
+@include breakpoints.mq(xxl) {
+  :root {
   }
 }
