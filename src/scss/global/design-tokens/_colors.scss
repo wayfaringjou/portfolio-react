@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $accent: #f3e04e;
 $sky: #cdd9d9;
 $sky2: #e3e5e5;
@@ -18,7 +20,15 @@ $colors: (
     400: #00c1dc,
   ),
   neutral: (
+    900: #000,
+    800: #5d6973,
+    700: #91a3b3,
+    600: #b0c6d9,
+    500: #c4ddf2,
     400: #faebd7,
+    300: #cfe8ff,
+    200: color.scale(#cfe8ff, $lightness: 10%),
+    100: #fff,
   ),
   accent: (
     400: #f3e04e,

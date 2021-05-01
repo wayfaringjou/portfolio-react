@@ -56,11 +56,11 @@ const Presentation = (): React.ReactElement => {
 
   return (
     <>
-      <section className="[ banner ] [ with-sidebar ]">
+      <section className="[ banner ] [ box with-sidebar ]">
         <div className="[ with-sidebar-intermediate ]">
           <section className="[ illustration ]">
-            <div className="[ backdrop ]" />
-            <div className="[ shape ] [  ]" />
+            {/* <div className="[ backdrop ] [ ]" /> */}
+            <div className="[ shape ] [ circle bg-accent-400 ]" />
             <figure className="exploded">
               <img src={background} alt="img" />
               <img src={backgroundOutline} alt="img" />
@@ -70,7 +70,7 @@ const Presentation = (): React.ReactElement => {
               <img src={contentOutline} alt="img" />
             </figure>
           </section>
-          <section className="[ invitation ]">
+          <section className="[ invitation stack ]">
             <h1 className="">Let&apos;s build something great together!</h1>
             <p>Looking for a new member for your team?</p>
             <button type="button">Get in touch</button>
