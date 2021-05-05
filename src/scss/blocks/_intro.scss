@@ -1,0 +1,9 @@
+.intro > .frame {
+  --aspect-num: 1;
+  --aspect-den: 3;
+}
+
+.intro > .frame > img {
+  width: calc(var(--aspect-num) / var(--aspect-den) * 100%);
+  margin: auto;
+}

@@ -1,0 +1,20 @@
+.illustration {
+  height: auto;
+  min-height: 38vh;
+}
+
+.illustration > .backdrop {
+  position: absolute;
+  width: 23ch;
+  height: 23ch;
+  top: 20ch;
+  left: 30ch;
+}
+
+.illustration > .shape {
+  position: absolute;
+  width: 70ch;
+  height: 70ch;
+  top: -25ch;
+  left: -18ch;
+}

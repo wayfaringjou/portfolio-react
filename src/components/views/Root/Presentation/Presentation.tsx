@@ -12,6 +12,8 @@ import {
   contentOutline,
 } from '../../../../img/illustration';
 
+import dots from '../../../../img/dots.svg';
+
 /*
 {
   "greeting": "Hi, I'm Joel.",
@@ -59,8 +61,11 @@ const Presentation = (): React.ReactElement => {
       <section className="[ banner ] [ box with-sidebar ]">
         <div className="[ with-sidebar-intermediate ]">
           <section className="[ illustration ]">
-            {/* <div className="[ backdrop ] [ ]" /> */}
             <div className="[ shape ] [ circle bg-accent-400 ]" />
+            <div
+              style={{ backgroundImage: `url(${dots})` }}
+              className="[ backdrop ] [ ]"
+            />
             <figure className="exploded">
               <img src={background} alt="img" />
               <img src={backgroundOutline} alt="img" />
@@ -72,7 +77,7 @@ const Presentation = (): React.ReactElement => {
           </section>
           <section className="[ invitation stack ]">
             <h1 className="">Let&apos;s build something great together!</h1>
-            <p>Looking for a new member for your team?</p>
+            <p>Looking for a web developer for your team? I&apos;d be glad to learn about your project! I&apos;m passionate about programming and have experience working with lots of different people. I like creating human-centered products and looking for creative solutions. Looking forward to hearing from you.</p>
             <button type="button">Get in touch</button>
           </section>
         </div>

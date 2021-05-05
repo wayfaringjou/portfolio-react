@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 
 const MainNav = (): ReactElement | null => (
   <>
-    <nav className="navbar sticky bg-3">
+    <nav className="navbar sticky [ bg-primary-400 ]">
       <ul>
         <li>
           <h2>Work</h2>
@@ -15,7 +15,7 @@ const MainNav = (): ReactElement | null => (
         </li>
       </ul>
     </nav>
-    <aside className="navbar socials sticky bg-4">
+    <aside className="navbar socials sticky [ bg-neutral-100 ]">
       <ul>
         <li>LinkedIn</li>
         <li>Github</li>
