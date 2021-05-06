@@ -75,7 +75,7 @@ const Presentation = (): React.ReactElement => {
               <img src={contentOutline} alt="img" />
             </figure>
           </section>
-          <section className="[ invitation stack ]">
+          <section className="[ invitation stack sidebar ]">
             <h1 className="">Let&apos;s build something great together!</h1>
             <p>Looking for a web developer for your team? I&apos;d be glad to learn about your project! I&apos;m passionate about programming and have experience working with lots of different people. I like creating human-centered products and looking for creative solutions. Looking forward to hearing from you!</p>
             <button type="button">Get in touch</button>

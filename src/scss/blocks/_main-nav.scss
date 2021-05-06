@@ -1,7 +1,24 @@
 .navbar > ul {
   list-style: none;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 20ch;
+  z-index: 2;
+}
+
+.main-nav h2 {
+  font-size: var(--ts0);
+}
+
+.socials svg {
+  width: var(--ts1);
+  height: var(--ts1);
 }

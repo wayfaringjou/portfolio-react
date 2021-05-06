@@ -1,5 +1,8 @@
 @use 'sass:map';
 
+$phi: 1.6180339887498948482;
+$Phi: 0.6180339887498948482;
+
 $ratios: (
   minor-second: 1.067,
   major-second: 1.125,
@@ -8,9 +11,12 @@ $ratios: (
   perfect-fourth: 1.333,
   augmented-fourth: 1.414,
   perfect-fifth: 1.5,
-  golden-ratio: 1.618,
+  golden-ratio: $phi,
   classic-typographic: 2,
 );
+
+$A: ($Phi * 100);
+$B: 100 - $A;
 
 $selectedRatio: 'golden-ratio';
 
@@ -29,5 +35,7 @@ $selectedRatio: 'golden-ratio';
 }
 
 :root {
+  --phi: #{$phi};
+  --Phi: #{$Phi};
   @include generateScale($selectedRatio);
 }

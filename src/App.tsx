@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Root from './components/views/Root';
 
-const App = (): ReactElement | null => (
+const App = (): React.ReactElement => (
   <div className="App">
     <Switch>
       <Route exact path="/" component={Root} />

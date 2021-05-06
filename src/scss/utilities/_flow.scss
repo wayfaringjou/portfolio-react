@@ -1,3 +1,21 @@
 .flow > * + * {
   margin-top: 1rem;
 }
+
+@for $i from -5 through 5 {
+  $directions: 'inline-start', 'inline-end', 'block-start', 'block-end';
+  @each $direction in $directions {
+    .pad-s#{$i}-#{$direction} {
+      padding-#{$direction}: var(--s#{$i});
+    }
+    .margin-s#{$i}-#{$direction} {
+      margin-#{$direction}: var(--s#{$i});
+    }
+  }
+  .pad-s#{$i}-all {
+    padding: var(--s#{$i});
+  }
+  .margin-s#{$i}-all {
+    margin: var(--s#{$i});
+  }
+}

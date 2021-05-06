@@ -13,30 +13,14 @@ const observerOptions = {
   threshold: 1.0,
 };
 
-const Root = (): React.ReactElement => {
-  // const containerRef = React.useRef<React.ReactNode>(null);
-  const [setNode, entry] = useIntersectionOberver(observerOptions);
-  /*
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(testCallback, observerOptions);
-    const target =
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => {
-      if (containerRef.current) observer.disconnect();
-    };
-  }, [containerRef]);
-*/
-
-  return (
-    <article id="portfolio-root" className="main-grid">
-      <Presentation />
-      <MainNav />
-      <div ref={setNode} />
-      <WorkOverview />
-      <About />
-      <Contact />
-    </article>
-  );
-};
+const Root = (): React.ReactElement => (
+  <article id="portfolio-root" className="main-grid">
+    <MainNav />
+    <Presentation />
+    <WorkOverview />
+    <About />
+    <Contact />
+  </article>
+);
 
 export default Root;

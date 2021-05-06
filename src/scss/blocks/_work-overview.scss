@@ -7,6 +7,7 @@
   padding: 2rem;
 }
 
+/*
 .project-card:last-child:nth-last-child(odd) {
   grid-column: auto / span 2;
 }
@@ -15,7 +16,7 @@
 .project-card:first-child:nth-last-child(even) ~ .project-card {
   grid-column: auto / span 1;
 }
-
+*/
 .project-card {
 }
 

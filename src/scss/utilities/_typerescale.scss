@@ -1,0 +1,7 @@
+@use '../global/design-tokens/typescale';
+
+@for $i from typescale.$noteRangeMin through typescale.$noteRangeMax {
+  .ts#{$i} {
+    font-size: var(--ts#{$i});
+  }
+}

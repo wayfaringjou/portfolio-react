@@ -20,7 +20,6 @@ const useInterserctionOberver = (
       ([ent]) => setEntry(ent),
       options,
     );
-    console.log(observer);
 
     const { current: currentObserver } = observer;
 

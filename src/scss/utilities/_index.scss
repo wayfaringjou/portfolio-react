@@ -1,9 +1,16 @@
-@forward 'flow';
+/* 'primitives' */
 @forward 'cover';
-@forward 'sticky';
-@forward 'shapes';
 @forward 'box';
 @forward 'stack';
 @forward 'frame';
 @forward 'sidebar';
+@forward 'cluster';
+
+/* imperative space, size and colors */
+@forward 'flow';
 @forward 'colors';
+@forward 'typerescale';
+
+/* visual design and interaction */
+@forward 'sticky';
+@forward 'shapes';

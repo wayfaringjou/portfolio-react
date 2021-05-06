@@ -79,7 +79,7 @@ const WorkOverview = (): ReactElement => {
   return (
     <>
       <section className="work-overview [ bg-primary-400 ]">
-        <header className="work-overview-header">
+        <header className="[ section-header ]">
           <h2>Work</h2>
         </header>
         <section className="card-grid">
