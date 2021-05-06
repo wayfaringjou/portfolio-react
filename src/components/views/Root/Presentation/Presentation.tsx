@@ -77,7 +77,7 @@ const Presentation = (): React.ReactElement => {
           </section>
           <section className="[ invitation stack ]">
             <h1 className="">Let&apos;s build something great together!</h1>
-            <p>Looking for a web developer for your team? I&apos;d be glad to learn about your project! I&apos;m passionate about programming and have experience working with lots of different people. I like creating human-centered products and looking for creative solutions. Looking forward to hearing from you.</p>
+            <p>Looking for a web developer for your team? I&apos;d be glad to learn about your project! I&apos;m passionate about programming and have experience working with lots of different people. I like creating human-centered products and looking for creative solutions. Looking forward to hearing from you!</p>
             <button type="button">Get in touch</button>
           </section>
         </div>
@@ -87,9 +87,10 @@ const Presentation = (): React.ReactElement => {
         <div className="[ frame ]">
           <img className="[ circle ]" alt="It's Joel" src={avatar} />
         </div>
-        <div className="[ box ]">
+        <div className="[ box stack ]">
           <h2 className="card-title">Hi! I&apos;m Joel,</h2>
           <p className="card-caption">{intro}</p>
+          <button type="button">My resume</button>
         </div>
       </section>
     </>

@@ -5,9 +5,9 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="465.99933"
+   width="1202.9692"
    height="742.75793"
-   viewBox="0 0 123.29566 196.52137"
+   viewBox="0 0 318.28562 196.52137"
    version="1.1"
    id="svg1365">
   <defs
@@ -26,16 +26,38 @@
   </metadata>
   <g
      id="layer1"
-     style="display:inline"
+     style="display:inline;opacity:1"
      transform="translate(0.5400334,0.52924603)">
     <rect
-       style="fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="opacity:1;fill:#f9f7f6;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="rect2111"
-       width="119.85943"
+       width="314.8494"
        height="193.9364"
        x="2.896194"
        y="2.0557303"
        rx="12.7"
        ry="12.7" />
+    <path
+       id="rect2111-8"
+       style="display:inline;opacity:1;fill:#dfdede;fill-opacity:1;stroke:none;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 15.476312,2.0557303 c -6.4468113,0 -11.7387165,4.7569175 -12.580118,10.9657627 H 317.50543 C 316.66404,6.8126478 311.37264,2.0557303 304.92584,2.0557303 Z" />
+    <circle
+       style="display:inline;fill:#df4661;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path2485-7-0-7-4"
+       cx="51.960213"
+       cy="8.8075523"
+       r="2.7541635" />
+    <circle
+       style="display:inline;fill:#b7dd79;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path2485-7-0-2-3"
+       cx="22.686256"
+       cy="8.8075523"
+       r="2.7541635" />
+    <circle
+       style="display:inline;fill:#f3e04e;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path2485-7-0-6-5"
+       cx="37.323235"
+       cy="8.8075523"
+       r="2.7541635" />
   </g>
 </svg>
