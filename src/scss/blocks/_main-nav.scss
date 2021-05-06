@@ -1,24 +1,30 @@
-.navbar > ul {
-  list-style: none;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center; */
-}
-
 .main-nav {
   position: fixed;
   top: 0;
   left: 0;
-  height: 20ch;
-  z-index: 2;
+  z-index: 4;
+  width: 100vw;
 }
 
 .main-nav h2 {
   font-size: var(--ts0);
 }
 
+.main-nav ul {
+  min-height: 4ch;
+}
+
 .socials svg {
   width: var(--ts1);
   height: var(--ts1);
+  display: block;
+}
+
+.main-nav.with-sidebar {
+  --content-min-width: auto;
+  --side-width: auto;
+}
+
+.main-nav .cluster {
+  --space: var(--s-1);
 }

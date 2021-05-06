@@ -20,7 +20,7 @@ $colors: (
     400: #00c1dc,
   ),
   neutral: (
-    900: #000,
+    900: #1e1a34,
     800: #5d6973,
     700: #91a3b3,
     600: #b0c6d9,
@@ -37,3 +37,22 @@ $colors: (
     error: red,
   ),
 );
+
+/*
+
+ primary: (
+    400: #00c1dc,
+  ),
+
+neutral: (
+    900: #1E1A34,
+    800: #5d6973,
+    700: #91a3b3,
+    600: #b0c6d9,
+    500: #c4ddf2,
+    400: #faebd7,
+    300: #cfe8ff,
+    200: color.scale(#cfe8ff, $lightness: 10%),
+    100: #f0eee9,
+  ),
+*/

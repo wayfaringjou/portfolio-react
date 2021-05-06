@@ -58,10 +58,9 @@ const Presentation = (): React.ReactElement => {
 
   return (
     <>
-      <section className="[ banner ] [ box with-sidebar ]">
+      <section className="[ banner ] [ box with-sidebar margin-s2-block-start ]">
         <div className="[ with-sidebar-intermediate ]">
           <section className="[ illustration ]">
-            <div className="[ shape ] [ circle bg-accent-400 ]" />
             <div
               style={{ backgroundImage: `url(${dots})` }}
               className="[ backdrop ] [ ]"
@@ -77,13 +76,19 @@ const Presentation = (): React.ReactElement => {
           </section>
           <section className="[ invitation stack sidebar ]">
             <h1 className="">Let&apos;s build something great together!</h1>
-            <p>Looking for a web developer for your team? I&apos;d be glad to learn about your project! I&apos;m passionate about programming and have experience working with lots of different people. I like creating human-centered products and looking for creative solutions. Looking forward to hearing from you!</p>
+            <p>
+              Looking for a web developer for your team? I&apos;d be glad to
+              learn about your project! I&apos;m passionate about programming
+              and have experience working with lots of different people. I like
+              creating human-centered products and looking for creative
+              solutions. Looking forward to hearing from you!
+            </p>
             <button type="button">Get in touch</button>
           </section>
         </div>
       </section>
 
-      <section className="[ intro ] [ box stack ]">
+      <section className="[ intro ] [ box stack bg-primary-400 ]">
         <div className="[ frame ]">
           <img className="[ circle ]" alt="It's Joel" src={avatar} />
         </div>

@@ -3,7 +3,7 @@ import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin } from '@mdi/js';
 
 const MainNav = (): ReactElement | null => (
-  <header className="[ main-nav with-sidebar ]">
+  <header className="[ main-nav with-sidebar pad-s-1-all ]">
     <div className="intermediary-wrapper">
       <nav className="[ navbar cluster ]">
         <ul>

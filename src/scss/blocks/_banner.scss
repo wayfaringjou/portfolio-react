@@ -5,3 +5,8 @@
 .banner .invitation {
   position: relative;
 }
+
+.banner.with-sidebar {
+  --content-min-width: calc(var(--Phi) * 100%);
+  --side-width: 38ch;
+}

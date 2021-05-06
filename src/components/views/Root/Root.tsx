@@ -5,6 +5,8 @@ import WorkOverview from './WorkOverview';
 import Contact from './Contact';
 import About from './About';
 
+import circle from '../../../img/circle.svg';
+
 import useIntersectionOberver from '../../../hooks/useIntersectionObserver';
 
 const observerOptions = {
@@ -14,7 +16,13 @@ const observerOptions = {
 };
 
 const Root = (): React.ReactElement => (
-  <article id="portfolio-root" className="main-grid">
+  <article
+    id="portfolio-root"
+    className="[ main-grid bg-circle ]"
+    style={{
+      backgroundImage: `url(${circle})`,
+    }}
+  >
     <MainNav />
     <Presentation />
     <WorkOverview />

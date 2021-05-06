@@ -7,17 +7,17 @@
 .with-sidebar > * {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(var(--s2) / 2 * -1);
+  margin: calc(var(--s1) / 2 * -1);
 }
 
 .with-sidebar > * > * {
   flex-basis: 0;
   flex-grow: 999;
-  min-width: calc(var(--content-min-width) - var(--s1));
+  margin: calc(var(--s1) / 2);
+  flex-basis: var(--side-width);
 }
 
 .with-sidebar > * > .sidebar {
-  margin: calc(var(--s2) / 2);
-  flex-basis: var(--side-width);
   flex-grow: 1;
+  min-width: calc(var(--content-min-width) - var(--s1));
 }
