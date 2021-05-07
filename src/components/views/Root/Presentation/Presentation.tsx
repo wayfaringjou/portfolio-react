@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import * as React from 'react';
 
+import Icon from '@mdi/react';
+import { mdiChevronRight, mdiFileAccount } from '@mdi/js';
 import fetchGraphQL from '../../../../utils/fetchGraphQL';
 
 import {
@@ -83,19 +85,31 @@ const Presentation = (): React.ReactElement => {
               creating human-centered products and looking for creative
               solutions. Looking forward to hearing from you!
             </p>
-            <button type="button">Get in touch</button>
+            <button type="button" className="[ icon contained  ]">
+              <Icon path={mdiChevronRight} />
+              Get in touch
+            </button>
           </section>
         </div>
       </section>
 
-      <section className="[ intro ] [ box stack bg-primary-400 ]">
-        <div className="[ frame ]">
-          <img className="[ circle ]" alt="It's Joel" src={avatar} />
+      <section className="[ intro ] [ box stack bg-primary-900 ]">
+        <div className="[ frame margin-s2-block-start ]">
+          <img
+            className="[ circle border-neutral-100 ]"
+            alt="It's Joel"
+            src={avatar}
+          />
         </div>
-        <div className="[ box stack ]">
-          <h2 className="card-title">Hi! I&apos;m Joel,</h2>
-          <p className="card-caption">{intro}</p>
-          <button type="button">My resume</button>
+        <div className="[ dots-decoration light ]">
+          <div className="[ box stack text-neutral-900 shadow-primary-400 bg-primary-100 ]">
+            <h2 className="[ card-title ]">Hi! I&apos;m Joel,</h2>
+            <p className="[ card-caption ]">{intro}</p>
+            <button type="button" className="[ icon contained ]">
+              <Icon path={mdiFileAccount} />
+              My resume
+            </button>
+          </div>
         </div>
       </section>
     </>

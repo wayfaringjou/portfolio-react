@@ -1,0 +1,39 @@
+button {
+  --main-clr: var(--clr-primary-400);
+  min-width: calc(var(--s0) * 4);
+  height: calc(var(--s0) * 2.25);
+  background-color: unset;
+  border: 0;
+  font-weight: 700;
+  padding-inline: var(--s0);
+  vertical-align: middle;
+  border-radius: var(--s-4);
+  align-self: flex-start;
+}
+
+button.contained {
+  background-color: var(--main-clr);
+}
+
+button.outlined {
+  --main-clr: var(--clr-accent-400);
+  border: solid thin var(--main-clr);
+  color: var(--main-clr);
+}
+
+button.text {
+  color: var(--main-clr);
+  padding-inline: calc(var(--s0) * 0.5);
+}
+
+button.icon {
+  padding-inline-start: calc(var(--s0) * 0.75);
+  display: inline-flex;
+  align-items: center;
+}
+
+button.icon svg {
+  width: var(--ts0);
+  height: var(--ts0);
+  margin-inline-end: calc(var(--s0) * 0.5);
+}

@@ -17,26 +17,43 @@ $dark: #333;
 
 $colors: (
   primary: (
-    400: #00c1dc,
+    900: #003745,
+    500: #00c1dc,
+    400: #77c5d5,
+    100: #e9fdff,
   ),
   neutral: (
-    900: #1e1a34,
-    800: #5d6973,
-    700: #91a3b3,
-    600: #b0c6d9,
-    500: #c4ddf2,
-    400: #faebd7,
-    300: #cfe8ff,
-    200: color.scale(#cfe8ff, $lightness: 10%),
+    900: #41273b,
+    800: #744455,
+    700: #a97669,
+    600: #d88f78,
+    500: #fdbe87,
+    400: #f7cc9d,
+    300: #faebd7,
+    200: #f3ede2,
     100: #f0eee9,
   ),
   accent: (
+    900: #eaaa00,
+    500: #ffe042,
     400: #f3e04e,
+    100: #fcfcd4,
+  ),
+  variant: (
+    900: #244545,
+    500: #1ccaae,
+    400: #479f91,
+    100: #d4fcf5,
   ),
   feedback: (
-    error: red,
+    error: #e2665c,
   ),
 );
+
+/* 
+Darks
+#41273b
+*/
 
 /*
 
