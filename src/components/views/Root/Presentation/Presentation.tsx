@@ -96,7 +96,7 @@ const Presentation = (): React.ReactElement => {
       <section className="[ intro ] [ box stack bg-primary-900 ]">
         <div className="[ frame margin-s2-block-start ]">
           <img
-            className="[ circle border-neutral-100 ]"
+            className="[ circle ]"
             alt="It's Joel"
             src={avatar}
           />

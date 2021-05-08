@@ -3,7 +3,7 @@
 
 .main-grid {
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 1fr;
 }
 @include breakpoints.mq(sm) {
   .main-grid {

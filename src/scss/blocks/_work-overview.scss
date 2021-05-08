@@ -91,3 +91,16 @@
   text-transform: capitalize;
   border-radius: 2px;
 }
+
+.skills-overview header > .icon-bg {
+  width: var(--s3);
+  height: var(--s3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-overview header svg {
+  width: var(--ts4);
+  height: var(--ts4);
+}

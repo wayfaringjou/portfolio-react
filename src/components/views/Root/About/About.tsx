@@ -1,10 +1,13 @@
-import React, { ReactElement } from 'react';
+import * as React from 'react';
 
-const About = (): ReactElement => (
+const About = (): React.ReactElement => (
   <>
-    <h6>About</h6>
-    <div className="overline">Text</div>
-    <div className="caption">Text</div>
+    <section className="[ about pad-s1-all bg-neutral-700 ]">
+      <header className="[ section-header ]">
+        <h2>About</h2>
+      </header>
+    </section>
+    <section className="[ bg-variant-900 ]"><h2>Another</h2></section>
   </>
 );
 

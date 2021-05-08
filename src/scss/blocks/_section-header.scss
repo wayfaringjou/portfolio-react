@@ -1,2 +1,4 @@
-.section-header {
+.section-header > h2 {
+  border-top: solid thin currentColor;
+  font-weight: 200;
 }

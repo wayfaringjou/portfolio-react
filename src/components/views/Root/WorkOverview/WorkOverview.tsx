@@ -1,3 +1,5 @@
+import { mdiServer, mdiXml } from '@mdi/js';
+import Icon from '@mdi/react';
 import React, { ReactElement, useEffect, useState } from 'react';
 import { fetchPinnedRepos } from '../../../../utils/fetchGraphQL';
 
@@ -78,7 +80,7 @@ const WorkOverview = (): ReactElement => {
 
   return (
     <>
-      <section className="[ work-overview ]">
+      <section className="[ work-overview pad-s1-all bg-neutral-900 text-neutral-100 ]">
         <header className="[ section-header ]">
           <h2>Work</h2>
         </header>
@@ -113,13 +115,27 @@ const WorkOverview = (): ReactElement => {
           ))}
         </section>
       </section>
-      <section className="[ bg-neutral-100 ]">
-        <h3>Front-end Developer</h3>
-        <p>Languages I speak</p>
-        <p>Tools I Use</p>
-        <h3>Back-end Developer</h3>
-        <p>Languages</p>
-        <p>Tools</p>
+      <section className="[ skills-overview bg-variant-100 ]">
+        <section className="[ box stack ]">
+          <header>
+            <div className="[ icon-bg circle bg-variant-500 ]">
+              <Icon path={mdiXml} />
+            </div>
+            <h3>Front-end Developer</h3>
+          </header>
+          <p>Languages I speak</p>
+          <p>Tools I Use</p>
+        </section>
+        <section className="[ box stack ]">
+          <header>
+            <div className="[ icon-bg circle bg-variant-500 ]">
+              <Icon path={mdiServer} />
+            </div>
+            <h3>Back-end Developer</h3>
+          </header>
+          <p>Languages</p>
+          <p>Tools</p>
+        </section>
       </section>
     </>
   );
