@@ -1,4 +1,20 @@
-import { mdiServer, mdiXml } from '@mdi/js';
+import {
+  mdiAws,
+  mdiConsole,
+  mdiGithub,
+  mdiGraphql,
+  mdiLanguageCss3,
+  mdiLanguageHtml5,
+  mdiLanguageJavascript,
+  mdiLanguageTypescript,
+  mdiMicrosoftVisualStudioCode,
+  mdiNodejs,
+  mdiReact,
+  mdiSass,
+  mdiServer,
+  mdiTools,
+  mdiXml,
+} from '@mdi/js';
 import Icon from '@mdi/react';
 import React, { ReactElement, useEffect, useState } from 'react';
 import { fetchPinnedRepos } from '../../../../utils/fetchGraphQL';
@@ -80,7 +96,7 @@ const WorkOverview = (): ReactElement => {
 
   return (
     <>
-      <section className="[ work-overview pad-s1-all bg-neutral-900 text-neutral-100 ]">
+      <section className="[ work-overview pad-s1-all bg-primary-100 text-neutral-900 ]">
         <header className="[ section-header ]">
           <h2>Work</h2>
         </header>
@@ -115,26 +131,98 @@ const WorkOverview = (): ReactElement => {
           ))}
         </section>
       </section>
-      <section className="[ skills-overview bg-variant-100 ]">
-        <section className="[ box stack ]">
-          <header>
-            <div className="[ icon-bg circle bg-variant-500 ]">
+      <section className="[ skills-overview bg-primary-400 ]">
+        <section className="[ box stack bg-primary-100 margin-s0-all ]">
+          <header className="[ stack ]">
+            <div className="[ icon-bg circle bg-primary-900 text-neutral-100 ]">
               <Icon path={mdiXml} />
             </div>
-            <h3>Front-end Developer</h3>
+            <h3 className="[ box bg-primary-100 text-neutral-900 ]">Front-end Developer</h3>
           </header>
-          <p>Languages I speak</p>
-          <p>Tools I Use</p>
+          <section className="skill-stack">
+            <ul className="[ cluster ]">
+              <div>
+                <li>
+                  <Icon path={mdiLanguageHtml5} />
+                  HTML
+                </li>
+                <li>
+                  <Icon path={mdiLanguageCss3} />
+                  CSS
+                </li>
+                <li>
+                  <Icon path={mdiSass} />
+                  Sass
+                </li>
+                <li>
+                  <Icon path={mdiLanguageJavascript} />
+                  Javascript
+                </li>
+                <li>
+                  <Icon path={mdiLanguageTypescript} />
+                  Typescript
+                </li>
+                <li>
+                  <Icon path={mdiReact} />
+                  React
+                </li>
+              </div>
+            </ul>
+          </section>
         </section>
         <section className="[ box stack ]">
-          <header>
-            <div className="[ icon-bg circle bg-variant-500 ]">
+          <header className="[ stack ]">
+            <div className="[ icon-bg circle bg-primary-100 ]">
               <Icon path={mdiServer} />
             </div>
             <h3>Back-end Developer</h3>
           </header>
-          <p>Languages</p>
-          <p>Tools</p>
+          <section className="skill-stack">
+            <ul className="[ cluster ]">
+              <div>
+                <li>
+                  <Icon path={mdiNodejs} />
+                  Node.js
+                </li>
+                <li>Express</li>
+                <li>
+                  <Icon path={mdiGraphql} />
+                  GraphQL
+                </li>
+                <li>PostgreSQL</li>
+              </div>
+            </ul>
+          </section>
+        </section>
+        <section className="[ box stack ]">
+          <header className="[ stack ]">
+            <div className="[ icon-bg circle bg-primary-100 ]">
+              <Icon path={mdiTools} />
+            </div>
+            <h3>Other Tools</h3>
+          </header>
+          <section className="skill-stack">
+            <ul className="[ cluster ]">
+              <div>
+                <li>
+                  <Icon path={mdiGithub} />
+                  Github
+                </li>
+                <li>
+                  <Icon path={mdiConsole} />
+                  CLI
+                </li>
+                <li>
+                  <Icon path={mdiAws} />
+                  AWS
+                </li>
+                <li>
+                  <Icon path={mdiMicrosoftVisualStudioCode} />
+                  VS Code
+                </li>
+              </div>
+            </ul>
+          </section>
         </section>
       </section>
     </>

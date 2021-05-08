@@ -10,7 +10,7 @@
       background-color: var(--clr-#{$color}-#{$shade});
     }
     .shadow-#{$color}-#{$shade} {
-      box-shadow: 25px 25px var(--clr-#{$color}-#{$shade});
+      box-shadow: var(--s-1) var(--s-1) var(--clr-#{$color}-#{$shade});
     }
     .border-#{$color}-#{$shade} {
       border: solid thin var(--clr-#{$color}-#{$shade});
@@ -25,7 +25,7 @@
 
 .dots-decoration {
   position: relative;
-  margin: 25px;
+  margin: var(--s-3);
   margin-block-start: calc(25px + var(--space));
 }
 

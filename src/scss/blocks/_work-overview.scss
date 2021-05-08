@@ -98,9 +98,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 .skills-overview header svg {
   width: var(--ts4);
   height: var(--ts4);
+}
+
+.skills-overview header {
+  border-radius: var(--s-3);
+}
+
+.skill-stack svg {
+  width: var(--ts0);
+  height: var(--ts0);
+  margin-inline-end: var(--s-2);
+}
+/*
+.skill-stack ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 0.5fr));
+  gap: var(--s-1);
+}
+*/
+
+.skill-stack li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-primary-900);
+  color: var(--clr-neutral-100);
+  padding: var(--s-1);
+  border-radius: var(--s-3);
+}
+
+.skill-stack .cluster {
+  --space: var(--s-1);
 }
