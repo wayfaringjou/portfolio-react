@@ -4,7 +4,7 @@ import Presentation from './Presentation';
 import WorkOverview from './WorkOverview';
 import Contact from './Contact';
 import About from './About';
-
+import Footer from '../../common/Footer';
 import circle from '../../../img/circle.svg';
 
 import useIntersectionOberver from '../../../hooks/useIntersectionObserver';
@@ -28,6 +28,7 @@ const Root = (): React.ReactElement => (
     <WorkOverview />
     <About />
     <Contact />
+    <Footer />
   </article>
 );
 

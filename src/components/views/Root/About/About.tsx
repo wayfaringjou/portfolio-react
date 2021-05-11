@@ -7,7 +7,7 @@ const About = (): React.ReactElement => (
         <h2>About</h2>
       </header>
     </section>
-    <section className="[ bg-variant-900 ]"><h2>Another</h2></section>
+    <section className="[ bg-variant-900 ]"><h2>When Im not coding...</h2></section>
   </>
 );
 
