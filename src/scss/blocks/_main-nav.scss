@@ -28,3 +28,7 @@
 .main-nav .cluster {
   --space: var(--s-1);
 }
+
+.main-nav.shaded {
+  background-color: var(--clr-accent-400);
+}

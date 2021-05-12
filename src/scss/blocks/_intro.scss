@@ -3,6 +3,7 @@
 .intro > .frame {
   --aspect-num: 1;
   --aspect-den: 1.5;
+  padding-bottom: calc(var(--aspect-num) / var(--aspect-den) * 105%);
   @include breakpoints.mq(sm) {
     --aspect-num: 1;
     --aspect-den: 3;

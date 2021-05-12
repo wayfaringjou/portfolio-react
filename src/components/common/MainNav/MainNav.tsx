@@ -3,11 +3,16 @@ import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin } from '@mdi/js';
 
 type mainNavProps = {
-  navRef: React.LegacyRef<HTMLElement>;
+  // navRef: React.LegacyRef<HTMLElement>;
+  presEntryProp: IntersectionObserverEntry | null;
 };
 
-const MainNav = ({ navRef }: mainNavProps): ReactElement | null => (
-  <header className="[ main-nav with-sidebar pad-s-1-all ]" ref={navRef}>
+const MainNav = ({ presEntryProp }: mainNavProps): ReactElement | null => (
+  <header
+    className={`[ main-nav ${
+      presEntryProp?.isIntersecting === false ? 'shaded' : ''
+    } with-sidebar pad-s-1-all ]`}
+  >
     <div className="intermediary-wrapper">
       <nav className="[ navbar cluster ]">
         <ul>

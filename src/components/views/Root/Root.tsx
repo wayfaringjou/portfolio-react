@@ -21,15 +21,13 @@ const Root = (): React.ReactElement => {
   const navRef = React.useRef(null);
 
   const observerOptions = {
-    root: navRef?.current,
-    rootMargin: '0px 0px 0px 0px',
-    threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+    root: null,
+    rootMargin: '-10px 0px 0px 0px',
+    threshold: 1,
   };
 
   const [presRef, presEntry] = useInterserctionOberver(observerOptions);
-  const [presVis, setPresVis] = React.useState(presEntry);
-  console.log(presEntry);
-  console.log(navRef);
+
   return (
     <article
       id="portfolio-root"
@@ -38,7 +36,7 @@ const Root = (): React.ReactElement => {
         backgroundImage: `url(${circle})`,
       }}
     >
-      <MainNav navRef={navRef} />
+      <MainNav presEntryProp={presEntry} />
       <Presentation presRef={presRef} />
       <WorkOverview />
       <About />

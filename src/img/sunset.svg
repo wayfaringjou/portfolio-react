@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="96.901154mm"
+   height="131.786mm"
+   viewBox="0 0 96.901154 131.786"
+   version="1.1"
+   id="svg4717"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="sunset.svg">
+  <defs
+     id="defs4711">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4372"
+       id="linearGradient4374"
+       x1="-600.30463"
+       y1="-447.79282"
+       x2="-599.73511"
+       y2="-579.94495"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(643.34964,550.05055)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4372">
+      <stop
+         style="stop-color:#41273b;stop-opacity:1"
+         offset="0"
+         id="stop4368" />
+      <stop
+         style="stop-color:#fdbe87;stop-opacity:1"
+         offset="0.5"
+         id="stop4376" />
+      <stop
+         style="stop-color:#f3ede2;stop-opacity:1"
+         offset="1"
+         id="stop4370" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="423.12028"
+     inkscape:cy="671.90157"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4714">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(6.117242,29.60729)">
+    <rect
+       style="fill:#f0eee9;stroke-width:2.17881;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.984887;paint-order:stroke fill markers"
+       id="rect1433-2"
+       width="96.901001"
+       height="131.786"
+       x="-6.117094"
+       y="-29.607283" />
+    <path
+       id="rect3656-25-7"
+       style="mix-blend-mode:multiply;fill:url(#linearGradient4374);fill-opacity:1;stroke:none;stroke-width:1.587;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m -6.117242,-12.32952 h 96.90115 v 2.20224 h -96.90115 z m 0,-4.3194 h 96.90115 v 2.20225 h -96.90115 z m 0,-4.31946 h 96.90115 v 2.20225 h -96.90115 z m 0,64.7916 h 96.90115 v 2.20225 h -96.90115 z m 0,-25.9166 h 96.90115 v 2.20225 h -96.90115 z m 0,69.11105 h 96.90115 v 2.20225 h -96.90115 z m 0,4.3194 h 96.90115 v 2.20225 h -96.90115 z m 0,-69.11108 h 96.90115 v 2.20225 h -96.90115 z m 0,73.43054 h 96.90115 v 2.20225 h -96.90115 z m 0,4.31946 h 96.90115 v 2.20225 h -96.90115 z m 0,-73.43054 h 96.90115 v 2.20224 h -96.90115 z m 0,56.15277 h 96.90115 v 2.20225 h -96.90115 z m 0,-21.59723 h 96.90115 v 2.20225 h -96.90115 z m 0,4.31946 h 96.90115 v 2.20224 h -96.90115 z m 0,-56.15274 h 96.90115 v 2.20224 h -96.90115 z m 0,60.47219 h 96.90115 v 2.20225 h -96.90115 z m 0,4.3194 h 96.90115 v 2.20225 h -96.90115 z m 0,-60.47214 h 96.90115 v 2.20225 h -96.90115 z m 0,64.7916 h 96.90115 v 2.20225 h -96.90115 z m 0,-73.43045 h 96.90115 v 2.20225 h -96.90115 z m 0,25.91659 h 96.90115 v 2.20225 h -96.90115 z m 0,-34.55551 h 96.90115 v 2.20225 h -96.90115 z m 0,38.87491 h 96.90115 v 2.20225 h -96.90115 z m 0,4.31946 h 96.90115 v 2.20225 h -96.90115 z m 0,-38.87491 h 96.90115 V 2.8311 h -96.90115 z m 0,51.83322 h 96.90115 v 2.20225 h -96.90115 z m 0,4.31946 h 96.90115 v 2.20225 h -96.90115 z m 0,-8.63886 h 96.90115 v 2.20225 h -96.90115 z m 0,-77.74996 h 96.90115 v 2.20224 h -96.90115 z m 0,4.31945 h 96.90115 v 2.20225 h -96.90115 z m 0,17.27777 h 96.90115 v 2.20225 h -96.90115 z" />
+    <path
+       id="path1255-9-0"
+       style="mix-blend-mode:normal;fill:#f3e873;fill-opacity:1;stroke-width:1.89679;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.984887;paint-order:stroke fill markers"
+       d="m 42.333408,-14.58276 a 19.162641,19.162641 0 0 0 -19.16266,19.16266 19.162641,19.162641 0 0 0 5.39296,13.32683 h 27.53888 A 19.162641,19.162641 0 0 0 61.496058,4.5799 19.162641,19.162641 0 0 0 42.333408,-14.58276 Z" />
+    <path
+       id="path1255-9-0-6"
+       style="mix-blend-mode:normal;fill:#f3e873;fill-opacity:1;stroke-width:1.89679;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.984887;paint-order:stroke fill markers"
+       d="m 42.333408,22.61394 a 19.162641,19.162641 0 0 0 -19.16266,19.16265 19.162641,19.162641 0 0 0 1.08883,6.36602 h 36.14766 a 19.162641,19.162641 0 0 0 1.08882,-6.36602 19.162641,19.162641 0 0 0 -19.16265,-19.16265 z" />
+    <path
+       id="path1255-9-0-1"
+       style="mix-blend-mode:normal;fill:#f3e873;fill-opacity:1;stroke-width:1.89679;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.984887;paint-order:stroke fill markers"
+       d="m 42.333408,56.17881 a 19.162641,19.162641 0 0 0 -19.11925,17.88057 h 38.23901 A 19.162641,19.162641 0 0 0 42.333408,56.17881 Z" />
+    <path
+       id="path1255-9-0-8"
+       style="mix-blend-mode:normal;fill:#f3e873;fill-opacity:1;stroke-width:1.89679;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.984887;paint-order:stroke fill markers"
+       d="m 42.333408,82.45783 a 19.162641,19.162641 0 0 0 -16.16956,8.87905 h 32.3386 a 19.162641,19.162641 0 0 0 -16.16904,-8.87905 z" />
+  </g>
+</svg>

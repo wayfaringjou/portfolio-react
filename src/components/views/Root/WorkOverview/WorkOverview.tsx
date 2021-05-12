@@ -96,7 +96,7 @@ const WorkOverview = (): ReactElement => {
 
   return (
     <>
-      <section className="[ work-overview pad-s1-all bg-primary-100 text-neutral-900 ]">
+      <section className="[ work-overview pad-s1-all text-neutral-900 ]">
         <header className="[ section-header ]">
           <h2>Work</h2>
         </header>
@@ -131,7 +131,7 @@ const WorkOverview = (): ReactElement => {
           ))}
         </section>
       </section>
-      <section className="[ skills-overview bg-primary-400 ]">
+      <section className="[ skills-overview ]">
         <section className="[ box stack bg-primary-100 margin-s0-all ]">
           <header className="[ stack ]">
             <div className="[ icon-bg circle bg-primary-900 text-neutral-100 ]">
