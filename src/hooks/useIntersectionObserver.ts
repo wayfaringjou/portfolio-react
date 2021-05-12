@@ -22,7 +22,7 @@ const useInterserctionOberver = (
     );
 
     const { current: currentObserver } = observer;
-
+    console.log(currentObserver);
     if (node) currentObserver.observe(node);
 
     return () => currentObserver.disconnect();

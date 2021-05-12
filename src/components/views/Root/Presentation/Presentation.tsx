@@ -26,7 +26,11 @@ import dots from '../../../../img/dots.svg';
 }
 */
 
-const Presentation = (): React.ReactElement => {
+type presentationProps = {
+  presRef: React.Dispatch<React.SetStateAction<any>>;
+};
+
+const Presentation = ({ presRef }: presentationProps): React.ReactElement => {
   const [intro, setIntro] = React.useState<string | null>(null);
   const [avatar, setAvatar] = React.useState<string | undefined>(undefined);
 
@@ -62,7 +66,7 @@ const Presentation = (): React.ReactElement => {
     <>
       <section className="[ banner ] [ box with-sidebar margin-s2-block-start ]">
         <div className="[ with-sidebar-intermediate ]">
-          <section className="[ illustration ]">
+          <section className="[ illustration ]" ref={presRef}>
             <div
               style={{ backgroundImage: `url(${dots})` }}
               className="[ backdrop ] [ ]"
@@ -95,11 +99,7 @@ const Presentation = (): React.ReactElement => {
 
       <section className="[ intro ] [ box stack bg-neutral-900 ]">
         <div className="[ frame margin-s2-block-start ]">
-          <img
-            className="[ circle ]"
-            alt="It's Joel"
-            src={avatar}
-          />
+          <img className="[ circle ]" alt="It's Joel" src={avatar} />
         </div>
         <div className="[ dots-decoration light ]">
           <div className="[ box stack text-neutral-900 shadow-neutral-400 bg-neutral-100 ]">
