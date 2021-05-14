@@ -116,10 +116,14 @@ const WorkOverview = (): ReactElement => {
                   <section className="tech-stack">
                     <div className="int-wrapper">
                       {[...node.repositoryTopics.nodes].map((item) => (
-                        <span className="tech-pill">{item.topic.name}</span>
+                        <span key={item.topic.name} className="tech-pill">
+                          {item.topic.name}
+                        </span>
                       ))}
                       {[...node.languages.nodes].map((item) => (
-                        <span className="tech-pill">{item.name}</span>
+                        <span key={item.name} className="tech-pill">
+                          {item.name}
+                        </span>
                       ))}
                     </div>
                   </section>
@@ -137,7 +141,9 @@ const WorkOverview = (): ReactElement => {
             <div className="[ icon-bg circle bg-primary-900 text-neutral-100 ]">
               <Icon path={mdiXml} />
             </div>
-            <h3 className="[ box bg-primary-100 text-neutral-900 ]">Front-end Developer</h3>
+            <h3 className="[ box bg-primary-100 text-neutral-900 ]">
+              Front-end Developer
+            </h3>
           </header>
           <section className="skill-stack">
             <ul className="[ cluster ]">

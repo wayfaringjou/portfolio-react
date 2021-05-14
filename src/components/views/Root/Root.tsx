@@ -7,7 +7,7 @@ import About from './About';
 import Footer from '../../common/Footer';
 import circle from '../../../img/circle.svg';
 
-import useInterserctionOberver from '../../../hooks/useIntersectionObserver';
+import useInterserctionObserver from '../../../hooks/useIntersectionObserver';
 
 /*
 const observerOptions = {
@@ -26,7 +26,8 @@ const Root = (): React.ReactElement => {
     threshold: 1,
   };
 
-  const [presRef, presEntry] = useInterserctionOberver(observerOptions);
+  // Shade nav after passing header illustration
+  const [presRef, presEntry] = useInterserctionObserver(observerOptions);
 
   return (
     <article

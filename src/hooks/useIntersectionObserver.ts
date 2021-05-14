@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const useInterserctionOberver = (
+const useInterserctionObserver = (
   options: IntersectionObserverInit,
 ): [
   React.Dispatch<React.SetStateAction<any>>,
@@ -31,4 +31,4 @@ const useInterserctionOberver = (
   return [setNode, entry];
 };
 
-export default useInterserctionOberver;
+export default useInterserctionObserver;
