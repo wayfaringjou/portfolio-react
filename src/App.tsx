@@ -1,30 +1,35 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Root from './components/views/Root';
-import useInterserctionObserver from './hooks/useIntersectionObserver';
-
-const sectionObserverOptions = {
-  root: null,
-  rootMargin: '-10px 0px 0px 0px',
-  threshold: 1,
-};
+import SectionObserverProvider, {
+  ObserverContext,
+} from './context/sectionObservers';
 
 const App = (): React.ReactElement => {
-  const [workRef, workEntry] = useInterserctionObserver(sectionObserverOptions);
-  const [aboutRef, aboutEntry] = useInterserctionObserver(
-    sectionObserverOptions,
-  );
-  const [contactRef, contactEntry] = useInterserctionObserver(
-    sectionObserverOptions,
-  );
-
+  const context = React.useContext(ObserverContext);
+  const [active, setActive] = React.useState<string | null | undefined>(null);
+  React.useEffect(() => {
+    console.log('redraw');
+  }, [context]);
+  console.log(context?.entries);
+  if (context?.entries) {
+    console.log(context.entries);
+    setActive(
+      Object.keys(context.entries).find((entry) => {
+        console.log(context.entries[entry]?.isIntersecting);
+        return context.entries[entry]?.isIntersecting === true;
+      }),
+    );
+  }
+  console.log(active);
   return (
     <div className="App bg-neutral-100">
-      <Switch>
-        <Route exact path="/" component={Root} />
-      </Switch>
+      <SectionObserverProvider>
+        <Switch>
+          <Route exact path="/" component={Root} />
+        </Switch>
+      </SectionObserverProvider>
     </div>
   );
 };
-
 export default App;

@@ -16,7 +16,10 @@ import {
   mdiXml,
 } from '@mdi/js';
 import Icon from '@mdi/react';
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, {
+  ReactElement, useContext, useEffect, useState,
+} from 'react';
+import { ObserverContext } from '../../../../context/sectionObservers';
 import { fetchPinnedRepos } from '../../../../utils/fetchGraphQL';
 
 type projectProps = Array<{
@@ -43,7 +46,7 @@ type projectProps = Array<{
 
 const WorkOverview = (): ReactElement => {
   const [projects, setProjects] = useState<projectProps | null>(null);
-
+  const context = useContext(ObserverContext);
   useEffect(() => {
     let isMounted = true;
     fetchPinnedRepos(`
@@ -96,9 +99,13 @@ const WorkOverview = (): ReactElement => {
 
   return (
     <>
-      <section className="[ work-overview pad-s1-all text-neutral-900 ]">
+      <section
+        ref={context?.refs.workRef}
+        className="[ work-overview pad-s1-all text-neutral-900 ]"
+      >
         <header className="[ section-header ]">
           <h2>Work</h2>
+          <p>{context?.entries.workEntry?.isIntersecting}</p>
         </header>
         <section className="card-grid">
           {projects?.map(({ node }) => (
