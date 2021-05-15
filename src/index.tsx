@@ -4,11 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './scss/main.scss';
+import SectionObserverProvider from './context/sectionObservers';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <SectionObserverProvider>
+        <App />
+      </SectionObserverProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('⚛️'),
