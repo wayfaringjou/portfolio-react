@@ -16,8 +16,8 @@ export const ObserverContext = React.createContext<
 // first lets gather observers
 const sectionObserverOptions = {
   root: null,
-  rootMargin: '10px 0px 0px 0px',
-  threshold: [0.7],
+  rootMargin: '0px',
+  threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
 };
 
 const SectionObserverProvider = ({
@@ -35,7 +35,7 @@ const SectionObserverProvider = ({
     refs: { workRef, aboutRef, contactRef },
     entries: { workEntry, aboutEntry, contactEntry },
   };
-  console.log(value);
+  // console.log(value);
   return (
     <ObserverContext.Provider value={value}>
       {children}

@@ -19,15 +19,15 @@ const useInterserctionObserver = (
     // If there is a reference to an observer, disconnect it
     if (observer.current) observer.current.disconnect();
     // Reconstruct observer using given options
-    observer.current = new window.IntersectionObserver(
-      ([ent]) => setEntry(ent),
-      options,
-    );
-    // Store observer reference as ref's current
+    observer.current = new window.IntersectionObserver(([ent]) => {
+      // console.log(ent);
+      setEntry(ent);
+    }, options);
+    // Deconstruct observer reference in ref's current as 'currentObserver'
     const { current: currentObserver } = observer;
     // If this redraw has an element node referenced attach observer
     if (node) currentObserver.observe(node);
-
+    // console.log(currentObserver.thresholds);
     // If component is unmounted use this callback to clean
     return () => currentObserver.disconnect();
   }, [node]);
