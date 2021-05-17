@@ -11,7 +11,7 @@ const MainNav = ({ presEntryProp }: mainNavProps): ReactElement | null => (
   <header
     className={`[ main-nav ${
       presEntryProp?.isIntersecting === false ? 'shaded' : ''
-    } with-sidebar pad-s-1-all ]`}
+    } with-sidebar pad-s-1-all background-fade ]`}
   >
     <div className="intermediary-wrapper">
       <nav className="[ navbar cluster ]">

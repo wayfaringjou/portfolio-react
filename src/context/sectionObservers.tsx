@@ -24,7 +24,13 @@ const SectionObserverProvider = ({
   children,
 }: SectionObserverProviderProps): React.ReactElement => {
   const [workRef, workEntry] = useInterserctionObserver(sectionObserverOptions);
+  const [skillsRef, skillsEntry] = useInterserctionObserver(
+    sectionObserverOptions,
+  );
   const [aboutRef, aboutEntry] = useInterserctionObserver(
+    sectionObserverOptions,
+  );
+  const [interestsRef, interestsEntry] = useInterserctionObserver(
     sectionObserverOptions,
   );
   const [contactRef, contactEntry] = useInterserctionObserver(
@@ -32,8 +38,12 @@ const SectionObserverProvider = ({
   );
 
   const value = {
-    refs: { workRef, aboutRef, contactRef },
-    entries: { workEntry, aboutEntry, contactEntry },
+    refs: {
+      workRef, skillsRef, aboutRef, interestsRef, contactRef,
+    },
+    entries: {
+      workEntry, skillsEntry, aboutEntry, interestsEntry, contactEntry,
+    },
   };
   // console.log(value);
   return (

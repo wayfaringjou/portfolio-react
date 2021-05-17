@@ -142,7 +142,7 @@ const WorkOverview = (): ReactElement => {
           ))}
         </section>
       </section>
-      <section className="[ skills-overview ]">
+      <section ref={context?.refs.skillsRef} className="[ skills-overview ]">
         <section className="[ box stack bg-primary-100 margin-s0-all ]">
           <header className="[ stack ]">
             <div className="[ icon-bg circle bg-primary-900 text-neutral-100 ]">
