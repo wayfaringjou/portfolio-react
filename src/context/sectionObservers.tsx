@@ -36,13 +36,26 @@ const SectionObserverProvider = ({
   const [contactRef, contactEntry] = useInterserctionObserver(
     sectionObserverOptions,
   );
+  const [socialsRef, socialsEntry] = useInterserctionObserver(
+    sectionObserverOptions,
+  );
 
   const value = {
     refs: {
-      workRef, skillsRef, aboutRef, interestsRef, contactRef,
+      workRef,
+      skillsRef,
+      aboutRef,
+      interestsRef,
+      contactRef,
+      socialsRef,
     },
     entries: {
-      workEntry, skillsEntry, aboutEntry, interestsEntry, contactEntry,
+      workEntry,
+      skillsEntry,
+      aboutEntry,
+      interestsEntry,
+      contactEntry,
+      socialsEntry,
     },
   };
   // console.log(value);

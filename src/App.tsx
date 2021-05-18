@@ -18,8 +18,7 @@ const setBackgroundShade = (entries: {
 
 const App = (): React.ReactElement => {
   const context = React.useContext(ObserverContext);
-  const activeShade = 'bg-neutral-100';
-  /*
+  let activeShade = 'bg-neutral-100';
   if (context?.entries) {
     // console.log(context.entries);
     console.log(`work: ${context.entries.workEntry?.intersectionRatio}`);
@@ -29,6 +28,7 @@ const App = (): React.ReactElement => {
       `interests: ${context.entries.interestsEntry?.intersectionRatio}`,
     );
     console.log(`contact: ${context.entries.contactEntry?.intersectionRatio}`);
+    console.log(`socials: ${context.entries.socialsEntry?.intersectionRatio}`);
 
     const { workEntry, skillsEntry } = context.entries;
     if (workEntry && skillsEntry) {
@@ -55,7 +55,7 @@ const App = (): React.ReactElement => {
     const { aboutEntry, interestsEntry } = context.entries;
     if (aboutEntry && interestsEntry) {
       if (aboutEntry.isIntersecting || interestsEntry.isIntersecting) {
-        if (aboutEntry.intersectionRatio >= 0.20) {
+        if (aboutEntry.intersectionRatio >= 0.2) {
           activeShade = 'bg-neutral-500';
         }
         if (aboutEntry.intersectionRatio >= 0.75) {
@@ -75,8 +75,31 @@ const App = (): React.ReactElement => {
         }
       }
     }
+
+    const { contactEntry, socialsEntry } = context.entries;
+    if (contactEntry && socialsEntry) {
+      if (contactEntry.isIntersecting || socialsEntry.isIntersecting) {
+        if (contactEntry.intersectionRatio >= 0.2) {
+          activeShade = 'bg-neutral-900 text-neutral-100';
+        }
+        if (contactEntry.intersectionRatio >= 0.75) {
+          activeShade = 'bg-neutral-900 text-neutral-100';
+        }
+        if (socialsEntry?.isIntersecting) {
+          if (
+            contactEntry.intersectionRatio !== socialsEntry.intersectionRatio
+          ) {
+            if (socialsEntry.intersectionRatio >= 0.15) {
+              activeShade = 'bg-neutral-900 text-neutral-100';
+            }
+            if (socialsEntry.intersectionRatio >= 0.5) {
+              activeShade = 'bg-neutral-900 text-neutral-100';
+            }
+          }
+        }
+      }
+    }
   }
-  */
   return (
     <div className={`[ App ] [ ${activeShade} background-fade ]`}>
       <Switch>

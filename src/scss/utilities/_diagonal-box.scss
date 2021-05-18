@@ -83,7 +83,7 @@
 .clip-path {
   --container-width: 100%;
   --viewport-width: 100vw;
-  $angle: 8deg;
+  $angle: 4deg;
   --angle: #{$angle};
   $tan: math.tan($angle);
   --acathetuslength: calc(#{$tan} / 2);
@@ -93,8 +93,8 @@
   background-color: var(--clr-neutral-100);
   background-image: url('/img/stripes.svg');
   background-size: 10px;
-  padding-top: calc(var(--clip-padding) + 7rem);
-  padding-bottom: calc(var(--clip-padding) + 7rem);
+  padding-top: calc(var(--clip-padding) * 2);
+  padding-bottom: calc(var(--clip-padding) * 2);
   clip-path: polygon(
     0% calc(var(--clip-padding) * 2),
     100% 0%,

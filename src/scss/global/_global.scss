@@ -23,3 +23,24 @@ hr {
   border-top: solid thin currentColor;
   width: 61.2%;
 }
+
+input,
+textarea {
+  border: solid thin currentColor;
+  background-color: unset;
+  color: currentColor;
+  padding: var(--s-1);
+  width: 100%;
+  border-radius: var(--s-2);
+}
+
+textarea {
+  min-height: 30ch;
+}
+
+fieldset,
+legend {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}

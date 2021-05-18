@@ -195,8 +195,8 @@ const WorkOverview = (): ReactElement => {
             <h3>Back-end Developer</h3>
           </header>
           <section className="skill-stack">
-            <ul className="[ cluster ]">
-              <div>
+            <div className="[ cluster ]">
+              <ul>
                 <li>
                   <Icon path={mdiNodejs} />
                   Node.js
@@ -207,8 +207,8 @@ const WorkOverview = (): ReactElement => {
                   GraphQL
                 </li>
                 <li>PostgreSQL</li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </section>
         </section>
         <section className="[ box stack ]">

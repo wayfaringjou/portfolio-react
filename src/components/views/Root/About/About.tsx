@@ -49,7 +49,7 @@ const About = (): React.ReactElement => {
       </section>
       <section
         ref={context?.refs.interestsRef}
-        className="[ interests pad-s1-inline-start stack ]"
+        className="[ interests stack ]"
       >
         <header className="[ subsection-header ]">
           <h3>When Im not coding...</h3>
@@ -61,7 +61,7 @@ const About = (): React.ReactElement => {
             <img alt="My bike" src={bike} />
             <img alt="Juan Diego fall in El Yunque" src={yunque} />
           </div>
-          <div className="[ interests-text ]">
+          <div className="[ interests-text box ]">
             <p>
               I often find inspiration in nature. I love hiking and going to the
               beach. I also enjoy going for a ride on my bike and playing
@@ -74,20 +74,22 @@ const About = (): React.ReactElement => {
           <header>
             <h4>Testimonial</h4>
           </header>
-          <p>
-            <em>
-              &quot;I highly recommend Joel to any employer. In addition to his
-              excellent core skill set he has a desire for continuous
-              improvement, and an interest in how to achieve software quality
-              and develop efficiently. These attributes will serve him well as a
-              junior developer and enable him to grow into a more experienced
-              and senior developer quickly.&quot;
-            </em>
-          </p>
-          <p className="[ overline ]">
-            —Valerie Beattie, mentor for the Engineering Flex software
-            development course at Thinkful
-          </p>
+          <section className="[ testimonial-text box stack ]">
+            <p>
+              <em>
+                &quot;I highly recommend Joel to any employer. In addition to
+                his excellent core skill set he has a desire for continuous
+                improvement, and an interest in how to achieve software quality
+                and develop efficiently. These attributes will serve him well as
+                a junior developer and enable him to grow into a more
+                experienced and senior developer quickly.&quot;
+              </em>
+            </p>
+            <p className="[ overline ]">
+              —Valerie Beattie, mentor for the Engineering Flex software
+              development course at Thinkful
+            </p>
+          </section>
         </section>
       </section>
     </>

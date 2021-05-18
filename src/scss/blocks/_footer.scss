@@ -6,6 +6,8 @@ footer {
   flex-wrap: wrap;
   flex: 1;
   justify-content: space-between;
+  background-image: url('/img/stripes-dark.svg');
+  background-size: 10px;
   @include breakpoints.mq(lg) {
     grid-column: auto / span 2;
   }

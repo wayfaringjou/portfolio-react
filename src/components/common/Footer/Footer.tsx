@@ -2,7 +2,12 @@ import * as React from 'react';
 import sunset from '../../../img/sunset.svg';
 
 const Footer = (): React.ReactElement => (
-  <footer className="[ box ]">
+  <footer className="[ pad-s2-block-start box stack ]">
+    <section>
+      <p className="[ caption ]">
+        ©2021-present Joel Del Cueto. All Rights Reserved
+      </p>
+    </section>
     <section className="[ quote ]">
       <hr />
       <h4>
@@ -14,9 +19,6 @@ const Footer = (): React.ReactElement => (
     </section>
     <section>
       <img src={sunset} alt="Abstract Sunset" />
-    </section>
-    <section>
-      <p>© Joel Del Cueto 2021</p>
     </section>
   </footer>
 );

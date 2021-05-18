@@ -3,6 +3,7 @@
 .interests-images {
   display: grid;
   grid-template-columns: 45% 45%;
+  row-gap: var(--s0);
   margin-left: auto;
   margin-right: auto;
   @include breakpoints.mq(lg) {

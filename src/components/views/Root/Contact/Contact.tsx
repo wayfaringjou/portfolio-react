@@ -1,3 +1,7 @@
+import {
+  mdiGithub, mdiGmail, mdiLinkedin, mdiTwitter,
+} from '@mdi/js';
+import Icon from '@mdi/react';
 import * as React from 'react';
 import { ObserverContext } from '../../../../context/sectionObservers';
 
@@ -14,11 +18,13 @@ const Contact = (): React.ReactElement => {
         <header className="[ section-header ]">
           <h2>Contact</h2>
         </header>
-        <form>
-          <fieldset>
-            <legend>Contact Form</legend>
+        <form className="[ box ]">
+          <fieldset className="[ stack ]">
+            <legend>
+              <h3>Leave a message:</h3>
+            </legend>
             <label htmlFor="name">
-              Name:
+              <p>Name:</p>
               <input
                 type="text"
                 id="name"
@@ -26,7 +32,7 @@ const Contact = (): React.ReactElement => {
               />
             </label>
             <label htmlFor="email">
-              email:
+              <p>Email:</p>
               <input
                 type="text"
                 id="email"
@@ -34,21 +40,30 @@ const Contact = (): React.ReactElement => {
               />
             </label>
             <label htmlFor="subject">
-              subject:
+              <p>Subject:</p>
               <input type="text" id="subject" placeholder="Your business" />
             </label>
             <label htmlFor="message">
-              Name:
+              <p>Message:</p>
               <textarea id="message" placeholder="Your message" />
             </label>
-            <button type="submit">Submit</button>
+            <button className="[ contained ]" type="submit">Submit</button>
           </fieldset>
         </form>
       </section>
-      <section className="[ pad-s1-inline-start ]">
+      <section
+        ref={context?.refs.socialsRef}
+        className="[ socials pad-s1-inline-start ]"
+      >
         <header className="[ subsection-header ]">
-          <h3>General Contact info</h3>
+          <h3>Socials</h3>
         </header>
+        <section className="[ socials-links ]">
+          <Icon path={mdiGithub} />
+          <Icon path={mdiLinkedin} />
+          <Icon path={mdiTwitter} />
+          <Icon path={mdiGmail} />
+        </section>
       </section>
     </>
   );

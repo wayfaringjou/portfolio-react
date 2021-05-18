@@ -4,6 +4,7 @@
 .main-grid {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: var(--s2);
 }
 @include breakpoints.mq(lg) {
   .main-grid {
