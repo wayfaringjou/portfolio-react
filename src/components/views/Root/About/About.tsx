@@ -14,8 +14,8 @@ const About = (): React.ReactElement => {
           <h2>About</h2>
         </header>
         <section className="[ bio ]">
-          <div className="[ diagonal-box ]">
-            <div className="[ diagonal-box-content text-neutral-900 stack ]">
+          <div className="[ clip-path ]">
+            <div className="[ clip-path-content text-neutral-900 stack ]">
               <p>
                 From 2011 to 2020 I worked as a priest in several communities in
                 Madrid and Puerto Rico. This job has given me the chance to know
