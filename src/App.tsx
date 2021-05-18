@@ -18,8 +18,8 @@ const setBackgroundShade = (entries: {
 
 const App = (): React.ReactElement => {
   const context = React.useContext(ObserverContext);
-  let activeShade = 'bg-neutral-100';
-
+  const activeShade = 'bg-neutral-100';
+  /*
   if (context?.entries) {
     // console.log(context.entries);
     console.log(`work: ${context.entries.workEntry?.intersectionRatio}`);
@@ -76,6 +76,7 @@ const App = (): React.ReactElement => {
       }
     }
   }
+  */
   return (
     <div className={`[ App ] [ ${activeShade} background-fade ]`}>
       <Switch>

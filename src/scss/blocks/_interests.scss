@@ -1,0 +1,15 @@
+@use '../composition/breakpoints';
+
+.interests-images {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoints.mq(lg) {
+    grid-template-columns: 20% 20% 20% 20%;
+  }
+}
+
+.interests-images > img {
+  max-width: 7em;
+}

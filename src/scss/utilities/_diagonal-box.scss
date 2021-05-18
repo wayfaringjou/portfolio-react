@@ -1,3 +1,6 @@
+@use 'sass:math';
+@use '../composition/breakpoints';
+
 .diagonal-box {
   --tan-calculation: 0.09719; /* tan(11°)/2 */
   --content-width: 100%;
@@ -78,14 +81,40 @@
 */
 
 .clip-path {
+  --container-width: 100%;
+  --viewport-width: 100vw;
+  $angle: 8deg;
+  --angle: #{$angle};
+  $tan: math.tan($angle);
+  --acathetuslength: calc(#{$tan} / 2);
+  --skew-padding: calc(var(--container-width) * var(--acathetuslength));
+  --clip-padding: calc(var(--viewport-width) * var(--acathetuslength));
   position: relative;
   background-color: var(--clr-neutral-100);
   background-image: url('/img/stripes.svg');
   background-size: 10px;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
-  -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+  padding-top: calc(var(--clip-padding) + 7rem);
+  padding-bottom: calc(var(--clip-padding) + 7rem);
+  clip-path: polygon(
+    0% calc(var(--clip-padding) * 2),
+    100% 0%,
+    100% calc(100% - var(--clip-padding) * 2),
+    0% 100%
+  );
+  -webkit-clip-path: polygon(
+    0% calc(var(--clip-padding) * 2),
+    100% 0%,
+    100% calc(100% - (var(--clip-padding) * 2)),
+    0% 100%
+  );
+  /*
+  @include breakpoints.mq(sm) {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+  */
 }
 
 .clip-path-content {

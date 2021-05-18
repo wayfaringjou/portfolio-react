@@ -47,25 +47,46 @@ const About = (): React.ReactElement => {
           </div>
         </section>
       </section>
-      <section ref={context?.refs.interestsRef} className="[ interests ]">
-        <header>
-          <h2>When Im not coding...</h2>
+      <section
+        ref={context?.refs.interestsRef}
+        className="[ interests pad-s1-inline-start stack ]"
+      >
+        <header className="[ subsection-header ]">
+          <h3>When Im not coding...</h3>
         </header>
-        <section>
-          <h4>Interests</h4>
-          <img alt="Pine grove beach in Carolina, Puerto Rico" src={beach} />
-          <p>The beach is a great source of inspiration.</p>
-          <img alt="My guitar" src={guitar} />
-          <p>I&apos;m learning to play the guitar.</p>
-          <img alt="My bike" src={bike} />
-          <p>I love going for a ride in my bike.</p>
-          <img alt="Juan Diego fall in El Yunque" src={yunque} />
-          <p>I love hiking</p>
-
-          <h3>A quote I&apos;ve been having in my mind</h3>
+        <section className="[ interests-description stack ]">
+          <div className="[ interests-images ]">
+            <img alt="Pine grove beach in Carolina, Puerto Rico" src={beach} />
+            <img alt="My guitar" src={guitar} />
+            <img alt="My bike" src={bike} />
+            <img alt="Juan Diego fall in El Yunque" src={yunque} />
+          </div>
+          <div className="[ interests-text ]">
+            <p>
+              I often find inspiration in nature. I love hiking and going to the
+              beach. I also enjoy going for a ride on my bike and playing
+              guitar.
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section className="[ testimonial stack ]">
+          <header>
+            <h4>Testimonial</h4>
+          </header>
           <p>
-            Not all those who wander are lost.
-            <em>J.R.R. Tolkien</em>
+            <em>
+              &quot;I highly recommend Joel to any employer. In addition to his
+              excellent core skill set he has a desire for continuous
+              improvement, and an interest in how to achieve software quality
+              and develop efficiently. These attributes will serve him well as a
+              junior developer and enable him to grow into a more experienced
+              and senior developer quickly.&quot;
+            </em>
+          </p>
+          <p className="[ overline ]">
+            —Valerie Beattie, mentor for the Engineering Flex software
+            development course at Thinkful
           </p>
         </section>
       </section>

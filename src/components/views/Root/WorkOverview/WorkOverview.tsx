@@ -101,7 +101,7 @@ const WorkOverview = (): ReactElement => {
     <>
       <section
         ref={context?.refs.workRef}
-        className="[ work-overview pad-s1-all text-neutral-900 ]"
+        className="[ work-overview text-neutral-900 ]"
       >
         <header className="[ section-header ]">
           <h2>Work</h2>
@@ -142,15 +142,19 @@ const WorkOverview = (): ReactElement => {
           ))}
         </section>
       </section>
-      <section ref={context?.refs.skillsRef} className="[ skills-overview ]">
-        <section className="[ box stack bg-primary-100 margin-s0-all ]">
+      <section
+        ref={context?.refs.skillsRef}
+        className="[ skills-overview pad-s1-inline-start ]"
+      >
+        <header className="[ subsection-header ]">
+          <h3>Skills</h3>
+        </header>
+        <section className="[ box stack margin-s0-all ]">
           <header className="[ stack ]">
             <div className="[ icon-bg circle bg-primary-900 text-neutral-100 ]">
               <Icon path={mdiXml} />
             </div>
-            <h3 className="[ box bg-primary-100 text-neutral-900 ]">
-              Front-end Developer
-            </h3>
+            <h3 className="[ box text-neutral-900 ]">Front-end Developer</h3>
           </header>
           <section className="skill-stack">
             <ul className="[ cluster ]">
