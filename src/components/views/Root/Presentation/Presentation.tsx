@@ -99,7 +99,7 @@ const Presentation = ({ presRef }: presentationProps): React.ReactElement => {
 
       <section className="[ intro ] [ box stack ]">
         <div className="[ frame margin-s2-block-start wave-decoration ]">
-          <img className="[ circle ]" alt="It's Joel" src={avatar} />
+          <img className="[ circle ]" width="460px" height="460px" alt="It's Joel" src={avatar} />
         </div>
         <div className="[ dots-decoration ]">
           <div className="[ box stack text-neutral-900 bg-neutral-100 shadow-neutral-900 border-neutral-900 ]">

@@ -11,8 +11,10 @@
 }
 
 .intro > .frame > img {
-  width: calc(var(--aspect-num) / var(--aspect-den) * 100%);
+  /* width: calc(var(--aspect-num) / var(--aspect-den) * 100%); */
   margin: auto;
+  width: 230px;
+  height: 230px;
 }
 
 .intro button {
