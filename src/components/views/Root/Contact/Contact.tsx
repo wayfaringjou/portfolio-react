@@ -53,7 +53,7 @@ const Contact = (): React.ReactElement => {
       </section>
       <section
         ref={context?.refs.socialsRef}
-        className="[ socials pad-s1-inline-start ]"
+        className="[ socials ]"
       >
         <header className="[ subsection-header ]">
           <h3>Socials</h3>

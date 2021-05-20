@@ -92,6 +92,15 @@
   border-radius: 2px;
 }
 
+.skills-overview {
+  border-right: solid thick var(--clr-primary-500);
+}
+
+.skills-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .skills-overview header > .icon-bg {
   width: var(--s3);
   height: var(--s3);
