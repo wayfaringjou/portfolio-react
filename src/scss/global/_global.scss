@@ -44,3 +44,9 @@ legend {
   margin: 0;
   border: 0;
 }
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
+}

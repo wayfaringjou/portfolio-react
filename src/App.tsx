@@ -18,6 +18,7 @@ const setBackgroundShade = (entries: {
 
 const App = (): React.ReactElement => {
   const context = React.useContext(ObserverContext);
+  /*
   let activeShade = 'bg-neutral-100';
   if (context?.entries) {
     // console.log(context.entries);
@@ -100,8 +101,9 @@ const App = (): React.ReactElement => {
       }
     }
   }
+  */
   return (
-    <div className={`[ App ] [ ${activeShade} background-fade ]`}>
+    <div className=" [ App ] [ sunset ] ">
       <Switch>
         <Route exact path="/" component={Root} />
       </Switch>

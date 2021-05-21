@@ -1,5 +1,9 @@
 @use '../composition/breakpoints';
 
+.about-more {
+  z-index: 1;
+}
+
 .interests-images {
   display: grid;
   grid-template-columns: 45% 45%;
@@ -10,7 +14,16 @@
     grid-template-columns: 20% 20% 20% 20%;
   }
 }
+.interests-description {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
 
-.interests-images > img {
+.interests-description > p {
+  flex-basis: 100%;
+}
+
+.interests-description > img {
   max-width: 7em;
 }

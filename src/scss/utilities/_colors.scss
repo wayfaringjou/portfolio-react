@@ -75,3 +75,18 @@
   left: 50%;
   transform: translateX(-58%) translateY(-58%);
 }
+
+.sunset {
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-neutral-100),
+    var(--clr-neutral-200),
+    var(--clr-neutral-300),
+    var(--clr-neutral-400),
+    var(--clr-neutral-500),
+    var(--clr-neutral-600),
+    var(--clr-neutral-700),
+    var(--clr-neutral-800),
+    var(--clr-neutral-900)
+  );
+}

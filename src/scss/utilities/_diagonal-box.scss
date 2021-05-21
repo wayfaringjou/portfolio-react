@@ -79,7 +79,6 @@
   );
 }
 */
-
 .clip-path {
   --container-width: 100%;
   --viewport-width: 100vw;
@@ -89,8 +88,15 @@
   --acathetuslength: calc(#{$tan} / 2);
   --skew-padding: calc(var(--container-width) * var(--acathetuslength));
   --clip-padding: calc(var(--viewport-width) * var(--acathetuslength));
+
   position: relative;
-  background-color: var(--clr-primary-300);
+  margin-top: calc(var(--clip-padding) * 2);
+  margin-bottom: calc(var(--clip-padding) * 2);
+}
+.clip-path::before {
+  position: absolute;
+  content: '';
+  background-color: var(--clr-neutral-100);
   background-image: url('/img/stripes.svg');
   background-size: 10px;
   padding-top: calc(var(--clip-padding) * 2);
@@ -107,6 +113,9 @@
     100% calc(100% - (var(--clip-padding) * 2)),
     0% 100%
   );
+  width: var(--viewport-width);
+  height: calc(100% + var(--clip-padding) * 3);
+  margin-top: calc(var(--clip-padding) * 2 * -1);
   /*
   @include breakpoints.mq(sm) {
     padding-top: 10%;

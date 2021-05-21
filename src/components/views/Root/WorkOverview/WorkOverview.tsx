@@ -146,8 +146,8 @@ const WorkOverview = (): ReactElement => {
         <header className="[ subsection-header ]">
           <h3>Skills</h3>
         </header>
-        <div className="[ skills-cards ]">
-          <section className="[ skill-card box stack margin-s2-all ]">
+        <div className="[ skills-cards cluster ]">
+          <section className="[ skill-card box stack ]">
             <header className="[ stack ]">
               <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                 <Icon path={mdiXml} />
@@ -185,9 +185,9 @@ const WorkOverview = (): ReactElement => {
               </div>
             </section>
           </section>
-          <section className="[ box stack ]">
+          <section className="[ skill-card box stack ]">
             <header className="[ stack ]">
-              <div className="[ icon-bg circle bg-primary-100 ]">
+              <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                 <Icon path={mdiServer} />
               </div>
               <h4>Back-end Developer</h4>
@@ -209,9 +209,9 @@ const WorkOverview = (): ReactElement => {
               </div>
             </section>
           </section>
-          <section className="[ box stack ]">
+          <section className="[ skill-card box stack ]">
             <header className="[ stack ]">
-              <div className="[ icon-bg circle bg-primary-100 ]">
+              <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                 <Icon path={mdiTools} />
               </div>
               <h4>Other Tools</h4>
