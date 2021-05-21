@@ -4,6 +4,7 @@ import beach from '../../../../img/beach.png';
 import guitar from '../../../../img/guitar.png';
 import yunque from '../../../../img/yunque.png';
 import bike from '../../../../img/bike.png';
+import interests from '../../../../img/interests.png';
 
 const About = (): React.ReactElement => {
   const context = React.useContext(ObserverContext);
@@ -47,50 +48,59 @@ const About = (): React.ReactElement => {
           </div>
         </section>
       </section>
-      <section
-        ref={context?.refs.interestsRef}
-        className="[ interests stack ]"
-      >
-        <header className="[ subsection-header ]">
-          <h3>When Im not coding...</h3>
-        </header>
-        <section className="[ interests-description stack ]">
-          <div className="[ interests-images ]">
-            <img alt="Pine grove beach in Carolina, Puerto Rico" src={beach} />
-            <img alt="My guitar" src={guitar} />
-            <img alt="My bike" src={bike} />
-            <img alt="Juan Diego fall in El Yunque" src={yunque} />
+      <section ref={context?.refs.interestsRef} className="[ interests stack ]">
+        <div className="with-border">
+          <div className="content-container">
+            <header className="[ subsection-header ]">
+              <h3>When Im not coding...</h3>
+            </header>
+            <section className="[ interests-description stack ]">
+              {/* <div className="[ interests-images ]">
+              <img alt="Pine grove beach in Carolina, Puerto Rico" src={beach} />
+              <img alt="My guitar" src={guitar} />
+              <img alt="My bike" src={bike} />
+              <img alt="Juan Diego fall in El Yunque" src={yunque} />
+            </div> */}
+              <div className="[ interests-text box ]">
+                <p>
+                  I often find inspiration in nature. I love hiking and going to
+                  the beach. I also enjoy going for a ride on my bike and
+                  playing guitar.
+                </p>
+              </div>
+            </section>
+            <hr />
+            <section className="[ testimonial stack ]">
+              <header>
+                <h4>Testimonial</h4>
+              </header>
+              <section className="[ testimonial-text box stack ]">
+                <p>
+                  <em>
+                    &quot;I highly recommend Joel to any employer. In addition
+                    to his excellent core skill set he has a desire for
+                    continuous improvement, and an interest in how to achieve
+                    software quality and develop efficiently. These attributes
+                    will serve him well as a junior developer and enable him to
+                    grow into a more experienced and senior developer
+                    quickly.&quot;
+                  </em>
+                </p>
+                <p className="[ overline ]">
+                  —Valerie Beattie, mentor for the Engineering Flex software
+                  development course at Thinkful
+                </p>
+              </section>
+            </section>
           </div>
-          <div className="[ interests-text box ]">
-            <p>
-              I often find inspiration in nature. I love hiking and going to the
-              beach. I also enjoy going for a ride on my bike and playing
-              guitar.
-            </p>
+          <div className="border-container">
+            <img
+              alt="my-interests"
+              className="[ border-img ]"
+              src={interests}
+            />
           </div>
-        </section>
-        <hr />
-        <section className="[ testimonial stack ]">
-          <header>
-            <h4>Testimonial</h4>
-          </header>
-          <section className="[ testimonial-text box stack ]">
-            <p>
-              <em>
-                &quot;I highly recommend Joel to any employer. In addition to
-                his excellent core skill set he has a desire for continuous
-                improvement, and an interest in how to achieve software quality
-                and develop efficiently. These attributes will serve him well as
-                a junior developer and enable him to grow into a more
-                experienced and senior developer quickly.&quot;
-              </em>
-            </p>
-            <p className="[ overline ]">
-              —Valerie Beattie, mentor for the Engineering Flex software
-              development course at Thinkful
-            </p>
-          </section>
-        </section>
+        </div>
       </section>
     </>
   );

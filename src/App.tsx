@@ -37,15 +37,15 @@ const App = (): React.ReactElement => {
           activeShade = 'bg-neutral-100';
         }
         if (workEntry.intersectionRatio >= 0.75) {
-          activeShade = 'bg-neutral-200';
+          activeShade = 'bg-neutral-100';
         }
         if (skillsEntry?.isIntersecting) {
           if (workEntry.intersectionRatio !== skillsEntry.intersectionRatio) {
             if (skillsEntry.intersectionRatio >= 0.15) {
-              activeShade = 'bg-neutral-300';
+              activeShade = 'bg-neutral-100';
             }
             if (skillsEntry.intersectionRatio >= 0.5) {
-              activeShade = 'bg-neutral-400';
+              activeShade = 'bg-neutral-100';
             }
           }
         }
@@ -56,20 +56,20 @@ const App = (): React.ReactElement => {
     if (aboutEntry && interestsEntry) {
       if (aboutEntry.isIntersecting || interestsEntry.isIntersecting) {
         if (aboutEntry.intersectionRatio >= 0.2) {
-          activeShade = 'bg-neutral-500';
+          activeShade = 'bg-neutral-100';
         }
         if (aboutEntry.intersectionRatio >= 0.75) {
-          activeShade = 'bg-neutral-600 text-neutral-100';
+          activeShade = 'bg-neutral-100 text-neutral-900';
         }
         if (interestsEntry?.isIntersecting) {
           if (
             aboutEntry.intersectionRatio !== interestsEntry.intersectionRatio
           ) {
             if (interestsEntry.intersectionRatio >= 0.15) {
-              activeShade = 'bg-neutral-700 text-neutral-100';
+              activeShade = 'bg-neutral-100 text-neutral-900';
             }
             if (interestsEntry.intersectionRatio >= 0.5) {
-              activeShade = 'bg-neutral-800 text-neutral-100';
+              activeShade = 'bg-neutral-100 text-neutral-900';
             }
           }
         }
@@ -80,20 +80,20 @@ const App = (): React.ReactElement => {
     if (contactEntry && socialsEntry) {
       if (contactEntry.isIntersecting || socialsEntry.isIntersecting) {
         if (contactEntry.intersectionRatio >= 0.2) {
-          activeShade = 'bg-neutral-900 text-neutral-100';
+          activeShade = 'bg-neutral-100 text-neutral-900';
         }
         if (contactEntry.intersectionRatio >= 0.75) {
-          activeShade = 'bg-neutral-900 text-neutral-100';
+          activeShade = 'bg-neutral-100 text-neutral-900';
         }
         if (socialsEntry?.isIntersecting) {
           if (
             contactEntry.intersectionRatio !== socialsEntry.intersectionRatio
           ) {
             if (socialsEntry.intersectionRatio >= 0.15) {
-              activeShade = 'bg-neutral-900 text-neutral-100';
+              activeShade = 'bg-neutral-100 text-neutral-900';
             }
             if (socialsEntry.intersectionRatio >= 0.5) {
-              activeShade = 'bg-neutral-900 text-neutral-100';
+              activeShade = 'bg-neutral-100 text-neutral-900';
             }
           }
         }

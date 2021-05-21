@@ -147,9 +147,9 @@ const WorkOverview = (): ReactElement => {
           <h3>Skills</h3>
         </header>
         <div className="[ skills-cards ]">
-          <section className="[ box stack margin-s0-all ]">
+          <section className="[ skill-card box stack margin-s2-all ]">
             <header className="[ stack ]">
-              <div className="[ icon-bg circle bg-primary-900 text-neutral-100 ]">
+              <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                 <Icon path={mdiXml} />
               </div>
               <h4 className="[ box text-neutral-900 ]">Front-end Developer</h4>
