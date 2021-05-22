@@ -7,6 +7,9 @@ import bike from '../../../../img/bike.png';
 import interests from '../../../../img/interests.png';
 import interestsA from '../../../../img/interests-a.png';
 import interestsB from '../../../../img/interests-b.png';
+import interests1 from '../../../../img/interests1.png';
+import interests2 from '../../../../img/interests2.png';
+import interests3 from '../../../../img/interests3.png';
 
 const About = (): React.ReactElement => {
   const context = React.useContext(ObserverContext);
@@ -64,48 +67,53 @@ const About = (): React.ReactElement => {
               <img alt="My bike" src={bike} />
               <img alt="Juan Diego fall in El Yunque" src={yunque} />
             </div> */}
-          <header>
-            <h4>Interests</h4>
-          </header>
+
           <section className="[ interests-description ][ box margin-s1-all ]">
             <img
               alt="my-interests"
-              className="[ border-img ]"
-              src={interestsA}
+              src={interests1}
             />
-            <p className="[ box ]">
-              I often find inspiration in nature. I love hiking and going to the
-              beach. I also enjoy going for a ride on my bike and playing
-              guitar.
-            </p>
+            <div className="[ description-text ][ stack box bg-neutral-100 ]">
+              <header>
+                <h4>Interests</h4>
+              </header>
+              <p>
+                I often find inspiration in nature. I love hiking and going to
+                the beach. I also enjoy going for a ride on my bike and playing
+                guitar.
+              </p>
+            </div>
+
             <img
               alt="my-interests"
-              className="[ border-img ]"
-              src={interestsB}
+              src={interests2}
+            />
+            <img
+              alt="my-interests"
+              src={interests3}
             />
           </section>
         </section>
-        <hr />
-        <section className="[ testimonial stack ]">
-          <header>
-            <h4>Testimonial</h4>
-          </header>
-          <section className="[ testimonial-text box stack ]">
-            <p>
-              <em>
-                &quot;I highly recommend Joel to any employer. In addition to
-                his excellent core skill set he has a desire for continuous
-                improvement, and an interest in how to achieve software quality
-                and develop efficiently. These attributes will serve him well as
-                a junior developer and enable him to grow into a more
-                experienced and senior developer quickly.&quot;
-              </em>
-            </p>
-            <p className="[ overline ]">
-              —Valerie Beattie, mentor for the Engineering Flex software
-              development course at Thinkful
-            </p>
-          </section>
+      </section>
+      <section className="[ testimonial stack ]">
+        <header>
+          <h4>Testimonial</h4>
+        </header>
+        <section className="[ testimonial-text box stack ]">
+          <p>
+            <em>
+              &quot;I highly recommend Joel to any employer. In addition to his
+              excellent core skill set he has a desire for continuous
+              improvement, and an interest in how to achieve software quality
+              and develop efficiently. These attributes will serve him well as a
+              junior developer and enable him to grow into a more experienced
+              and senior developer quickly.&quot;
+            </em>
+          </p>
+          <p className="[ overline ]">
+            —Valerie Beattie, mentor for the Engineering Flex software
+            development course at Thinkful
+          </p>
         </section>
       </section>
     </>

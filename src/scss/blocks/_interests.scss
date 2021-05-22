@@ -14,16 +14,41 @@
     grid-template-columns: 20% 20% 20% 20%;
   }
 }
+
+.interests {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.interests-description {
+  max-height: 25ch;
+}
+
 .interests-description {
   display: flex;
   flex-direction: row;
   padding: 0;
 }
 
-.interests-description > p {
+.interests-description .description-text {
   flex-basis: 100%;
+  border-radius: 3rem 0 5rem 0;
 }
 
 .interests-description > img {
-  max-width: 7em;
+  height: 100%;
+}
+
+.testimonial {
+  justify-content: center;
+  align-items: center;
+  @include breakpoints.mq(lg) {
+    grid-column: auto / span 2;
+  }
+}
+
+.testimonial-text {
+  max-width: 78ch;
 }

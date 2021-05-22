@@ -30,5 +30,6 @@
 }
 
 .main-nav.shaded {
-  background-color: var(--clr-accent-400);
+  background-color: var(--clr-accent-450);
+  backdrop-filter: blur(4px);
 }
