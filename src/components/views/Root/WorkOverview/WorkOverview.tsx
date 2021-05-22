@@ -1,28 +1,10 @@
-import {
-  mdiAws,
-  mdiBash,
-  mdiConsole,
-  mdiGithub,
-  mdiGraphql,
-  mdiLanguageCss3,
-  mdiLanguageHtml5,
-  mdiLanguageJavascript,
-  mdiLanguageTypescript,
-  mdiMicrosoftVisualStudioCode,
-  mdiNodejs,
-  mdiNpm,
-  mdiReact,
-  mdiSass,
-  mdiServer,
-  mdiTools,
-  mdiXml,
-} from '@mdi/js';
-import Icon from '@mdi/react';
-import React, {
-  ReactElement, useContext, useEffect, useState,
-} from 'react';
+import * as React from 'react';
+import SkillCard from './SkillCard';
 import { ObserverContext } from '../../../../context/sectionObservers';
 import { fetchPinnedRepos } from '../../../../utils/fetchGraphQL';
+import skillset from './skillset';
+
+const skillKeys = Object.keys(skillset) as Array<keyof typeof skillset>;
 
 type projectProps = Array<{
   node: {
@@ -46,10 +28,10 @@ type projectProps = Array<{
   };
 }>;
 
-const WorkOverview = (): ReactElement => {
-  const [projects, setProjects] = useState<projectProps | null>(null);
-  const context = useContext(ObserverContext);
-  useEffect(() => {
+const WorkOverview = (): React.ReactElement => {
+  const [projects, setProjects] = React.useState<projectProps | null>(null);
+  const context = React.useContext(ObserverContext);
+  React.useEffect(() => {
     let isMounted = true;
     fetchPinnedRepos(`
       query pinnedRepos {
@@ -107,9 +89,8 @@ const WorkOverview = (): ReactElement => {
       >
         <header className="[ section-header ]">
           <h2>Work</h2>
-          <p>{context?.entries.workEntry?.isIntersecting}</p>
         </header>
-        <section className="card-grid">
+        <section className="[ card-grid ]">
           {projects?.map(({ node }) => (
             <article key={node.name} className="project-card">
               <figure>
@@ -148,126 +129,11 @@ const WorkOverview = (): ReactElement => {
         <header className="[ subsection-header ]">
           <h3>Skills</h3>
         </header>
-        <div className="[ skills-cards cluster ]">
+        <div className="[ skills-cards box ]">
           <div>
-            <section className="[ skill-card box ]">
-              <header className="[ stack box ]">
-                <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
-                  <Icon path={mdiXml} />
-                </div>
-                <h4 className="[ text-neutral-900 ]">
-                  Front-end Developer
-                </h4>
-              </header>
-              <section className="skill-stack stack box">
-                <p>
-                  I&apos;m always learning and looking for ways to combine
-                  structure, functionality, and design to communicate
-                  effectively with the user.
-                </p>
-                <div className="[ cluster ]">
-                  <ul>
-                    <li>
-                      <Icon path={mdiLanguageHtml5} />
-                      HTML
-                    </li>
-                    <li>
-                      <Icon path={mdiLanguageCss3} />
-                      CSS
-                    </li>
-                    <li>
-                      <Icon path={mdiSass} />
-                      Sass
-                    </li>
-                    <li>
-                      <Icon path={mdiLanguageJavascript} />
-                      Javascript
-                    </li>
-                    <li>
-                      <Icon path={mdiLanguageTypescript} />
-                      Typescript
-                    </li>
-                    <li>
-                      <Icon path={mdiReact} />
-                      React
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </section>
-            <section className="[ skill-card box ]">
-              <header className="[ stack box ]">
-                <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
-                  <Icon path={mdiServer} />
-                </div>
-                <h4>Back-end Developer</h4>
-              </header>
-              <section className="skill-stack stack box">
-                <p>
-                  When it comes to designing APIs or database schemas I look for
-                  solutions that are fast and secure.
-                </p>
-                <div className="[ cluster ]">
-                  <ul>
-                    <li>
-                      <Icon path={mdiNodejs} />
-                      Node.js
-                    </li>
-                    <li>Express</li>
-                    <li>
-                      <Icon path={mdiGraphql} />
-                      GraphQL
-                    </li>
-                    <li>PostgreSQL</li>
-                  </ul>
-                </div>
-              </section>
-            </section>
-            <section className="[ skill-card box ]">
-              <header className="[ stack box ]">
-                <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
-                  <Icon path={mdiTools} />
-                </div>
-                <h4>Other Tools</h4>
-              </header>
-              <section className="skill-stack stack box">
-                <p>
-                  I love technology and learning to work with all kinds of
-                  environments and tools.
-                </p>
-                <div className="[ cluster ]">
-                  <ul>
-                    <li>
-                      <Icon path={mdiGithub} />
-                      Github
-                    </li>
-                    <li>
-                      <Icon path={mdiConsole} />
-                      CLI
-                    </li>
-                    <li>
-                      <Icon path={mdiAws} />
-                      AWS
-                    </li>
-                    <li>
-                      <Icon path={mdiMicrosoftVisualStudioCode} />
-                      VS Code
-                    </li>
-                    <li>
-                      <Icon path={mdiBash} />
-                      Bash
-                    </li>
-                    <li>Figma</li>
-                    <li>Inkscape</li>
-                    <li>Gimp</li>
-                    <li>
-                      <Icon path={mdiNpm} />
-                      NPM
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </section>
+            {skillKeys.map((key) => (
+              <SkillCard key={key} skill={skillset[key]} />
+            ))}
           </div>
         </div>
       </section>

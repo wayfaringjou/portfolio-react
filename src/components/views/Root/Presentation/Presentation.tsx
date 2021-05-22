@@ -102,7 +102,7 @@ const Presentation = ({ presRef }: presentationProps): React.ReactElement => {
           <img className="[ circle ]" width="460px" height="460px" alt="It's Joel" src={avatar} />
         </div>
         <div className="[ dots-decoration ]">
-          <div className="[ box stack text-neutral-900 bg-neutral-100 shadow-neutral-900 border-neutral-900 ]">
+          <div className="[ box stack shifted ]">
             <h2 className="[ card-title ]">Hi! I&apos;m Joel,</h2>
             <p className="[ card-caption ]">{intro}</p>
             <button type="button" className="[ icon contained ]">

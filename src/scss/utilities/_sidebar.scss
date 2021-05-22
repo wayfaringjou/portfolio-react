@@ -1,6 +1,9 @@
 .with-sidebar {
+  /* The narrowest the content element 
+  can be before wrapping. Should be a percentage. */
   --content-min-width: 50%;
-  --side-width: auto;
+  /* The width of the sidebar */
+  --side-width: 0;
   overflow: hidden;
 }
 
@@ -11,13 +14,13 @@
 }
 
 .with-sidebar > * > * {
-  flex-basis: 0;
-  flex-grow: 999;
   margin: calc(var(--s1) / 2);
+  flex-grow: 1;
   flex-basis: var(--side-width);
 }
 
-.with-sidebar > * > .sidebar {
-  flex-grow: 1;
+.with-sidebar > * > .content {
+  flex-basis: 0;
+  flex-grow: 999;
   min-width: calc(var(--content-min-width) - var(--s1));
 }
