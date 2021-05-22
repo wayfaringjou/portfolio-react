@@ -145,8 +145,19 @@
   --space: var(--s-1);
 }
 
+.skills-cards {
+  --space: var(--s4);
+}
+
+.skills-cards > * {
+  margin: 0;
+}
+
 .skill-card {
   position: relative;
+  border: solid transparent 10px;
+  flex-direction: row;
+  margin: 0;
   &::before {
     content: '';
     position: absolute;

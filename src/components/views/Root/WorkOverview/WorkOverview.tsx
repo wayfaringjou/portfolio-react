@@ -147,98 +147,102 @@ const WorkOverview = (): ReactElement => {
           <h3>Skills</h3>
         </header>
         <div className="[ skills-cards cluster ]">
-          <section className="[ skill-card box stack ]">
-            <header className="[ stack ]">
-              <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
-                <Icon path={mdiXml} />
-              </div>
-              <h4 className="[ box text-neutral-900 ]">Front-end Developer</h4>
-            </header>
-            <section className="skill-stack">
-              <div className="[ cluster ]">
-                <ul>
-                  <li>
-                    <Icon path={mdiLanguageHtml5} />
-                    HTML
-                  </li>
-                  <li>
-                    <Icon path={mdiLanguageCss3} />
-                    CSS
-                  </li>
-                  <li>
-                    <Icon path={mdiSass} />
-                    Sass
-                  </li>
-                  <li>
-                    <Icon path={mdiLanguageJavascript} />
-                    Javascript
-                  </li>
-                  <li>
-                    <Icon path={mdiLanguageTypescript} />
-                    Typescript
-                  </li>
-                  <li>
-                    <Icon path={mdiReact} />
-                    React
-                  </li>
-                </ul>
-              </div>
+          <div>
+            <section className="[ skill-card box stack ]">
+              <header className="[ stack ]">
+                <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
+                  <Icon path={mdiXml} />
+                </div>
+                <h4 className="[ box text-neutral-900 ]">
+                  Front-end Developer
+                </h4>
+              </header>
+              <section className="skill-stack">
+                <div className="[ cluster ]">
+                  <ul>
+                    <li>
+                      <Icon path={mdiLanguageHtml5} />
+                      HTML
+                    </li>
+                    <li>
+                      <Icon path={mdiLanguageCss3} />
+                      CSS
+                    </li>
+                    <li>
+                      <Icon path={mdiSass} />
+                      Sass
+                    </li>
+                    <li>
+                      <Icon path={mdiLanguageJavascript} />
+                      Javascript
+                    </li>
+                    <li>
+                      <Icon path={mdiLanguageTypescript} />
+                      Typescript
+                    </li>
+                    <li>
+                      <Icon path={mdiReact} />
+                      React
+                    </li>
+                  </ul>
+                </div>
+              </section>
             </section>
-          </section>
-          <section className="[ skill-card box stack ]">
-            <header className="[ stack ]">
-              <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
-                <Icon path={mdiServer} />
-              </div>
-              <h4>Back-end Developer</h4>
-            </header>
-            <section className="skill-stack">
-              <div className="[ cluster ]">
-                <ul>
-                  <li>
-                    <Icon path={mdiNodejs} />
-                    Node.js
-                  </li>
-                  <li>Express</li>
-                  <li>
-                    <Icon path={mdiGraphql} />
-                    GraphQL
-                  </li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
+            <section className="[ skill-card box stack ]">
+              <header className="[ stack ]">
+                <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
+                  <Icon path={mdiServer} />
+                </div>
+                <h4>Back-end Developer</h4>
+              </header>
+              <section className="skill-stack">
+                <div className="[ cluster ]">
+                  <ul>
+                    <li>
+                      <Icon path={mdiNodejs} />
+                      Node.js
+                    </li>
+                    <li>Express</li>
+                    <li>
+                      <Icon path={mdiGraphql} />
+                      GraphQL
+                    </li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </section>
             </section>
-          </section>
-          <section className="[ skill-card box stack ]">
-            <header className="[ stack ]">
-              <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
-                <Icon path={mdiTools} />
-              </div>
-              <h4>Other Tools</h4>
-            </header>
-            <section className="skill-stack">
-              <div className="[ cluster ]">
-                <ul>
-                  <li>
-                    <Icon path={mdiGithub} />
-                    Github
-                  </li>
-                  <li>
-                    <Icon path={mdiConsole} />
-                    CLI
-                  </li>
-                  <li>
-                    <Icon path={mdiAws} />
-                    AWS
-                  </li>
-                  <li>
-                    <Icon path={mdiMicrosoftVisualStudioCode} />
-                    VS Code
-                  </li>
-                </ul>
-              </div>
+            <section className="[ skill-card box stack ]">
+              <header className="[ stack ]">
+                <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
+                  <Icon path={mdiTools} />
+                </div>
+                <h4>Other Tools</h4>
+              </header>
+              <section className="skill-stack">
+                <div className="[ cluster ]">
+                  <ul>
+                    <li>
+                      <Icon path={mdiGithub} />
+                      Github
+                    </li>
+                    <li>
+                      <Icon path={mdiConsole} />
+                      CLI
+                    </li>
+                    <li>
+                      <Icon path={mdiAws} />
+                      AWS
+                    </li>
+                    <li>
+                      <Icon path={mdiMicrosoftVisualStudioCode} />
+                      VS Code
+                    </li>
+                  </ul>
+                </div>
+              </section>
             </section>
-          </section>
+          </div>
         </div>
       </section>
     </>

@@ -15,23 +15,31 @@
   }
 }
 
+/*
 .interests {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+*/
+/*
 .interests-description {
   max-height: 25ch;
 }
-
+*/
 .interests-description {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 25%));
+  grid-template-rows: repeat(auto-fit, minmax(25%, 25%));
 }
 
+.interests-description .description-text {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 3;
+}
+/*
 .interests-description .description-text {
   flex-basis: 100%;
   border-radius: 3rem 0 5rem 0;
@@ -40,7 +48,7 @@
 .interests-description > img {
   height: 100%;
 }
-
+*/
 .testimonial {
   justify-content: center;
   align-items: center;

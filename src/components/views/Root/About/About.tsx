@@ -10,6 +10,9 @@ import interestsB from '../../../../img/interests-b.png';
 import interests1 from '../../../../img/interests1.png';
 import interests2 from '../../../../img/interests2.png';
 import interests3 from '../../../../img/interests3.png';
+import interests4 from '../../../../img/interests4.png';
+import interests5 from '../../../../img/interests5.png';
+import interests6 from '../../../../img/interests6.png';
 
 const About = (): React.ReactElement => {
   const context = React.useContext(ObserverContext);
@@ -69,10 +72,9 @@ const About = (): React.ReactElement => {
             </div> */}
 
           <section className="[ interests-description ][ box margin-s1-all ]">
-            <img
-              alt="my-interests"
-              src={interests1}
-            />
+            <img alt="my-interests" src={interests1} />
+            <img alt="my-interests" src={interests2} />
+
             <div className="[ description-text ][ stack box bg-neutral-100 ]">
               <header>
                 <h4>Interests</h4>
@@ -83,15 +85,10 @@ const About = (): React.ReactElement => {
                 guitar.
               </p>
             </div>
-
-            <img
-              alt="my-interests"
-              src={interests2}
-            />
-            <img
-              alt="my-interests"
-              src={interests3}
-            />
+            <img alt="my-interests" src={interests3} />
+            <img alt="my-interests" src={interests4} />
+            <img alt="my-interests" src={interests5} />
+            <img alt="my-interests" src={interests6} />
           </section>
         </section>
       </section>
