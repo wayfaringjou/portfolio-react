@@ -128,6 +128,10 @@
   gap: var(--s-1);
 }
 */
+.skill-card.box,
+.skill-card .box {
+  padding: var(--s-1);
+}
 
 .skill-stack li {
   display: flex;
@@ -156,7 +160,9 @@
 .skill-card {
   position: relative;
   border: solid transparent 10px;
+  display: flex;
   flex-direction: row;
+  align-items: center;
   margin: 0;
   &::before {
     content: '';
@@ -187,6 +193,11 @@
     transform: translateX(-10px) translateY(-10px);
     border-radius: var(--s-3);
   }
+}
+
+.skill-card > header {
+  flex-basis: 61.2%;
+  text-align: center;
 }
 
 .with-border {

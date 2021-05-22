@@ -1,5 +1,6 @@
 import {
   mdiAws,
+  mdiBash,
   mdiConsole,
   mdiGithub,
   mdiGraphql,
@@ -9,6 +10,7 @@ import {
   mdiLanguageTypescript,
   mdiMicrosoftVisualStudioCode,
   mdiNodejs,
+  mdiNpm,
   mdiReact,
   mdiSass,
   mdiServer,
@@ -148,16 +150,21 @@ const WorkOverview = (): ReactElement => {
         </header>
         <div className="[ skills-cards cluster ]">
           <div>
-            <section className="[ skill-card box stack ]">
-              <header className="[ stack ]">
+            <section className="[ skill-card box ]">
+              <header className="[ stack box ]">
                 <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                   <Icon path={mdiXml} />
                 </div>
-                <h4 className="[ box text-neutral-900 ]">
+                <h4 className="[ text-neutral-900 ]">
                   Front-end Developer
                 </h4>
               </header>
-              <section className="skill-stack">
+              <section className="skill-stack stack box">
+                <p>
+                  I&apos;m always learning and looking for ways to combine
+                  structure, functionality, and design to communicate
+                  effectively with the user.
+                </p>
                 <div className="[ cluster ]">
                   <ul>
                     <li>
@@ -188,14 +195,18 @@ const WorkOverview = (): ReactElement => {
                 </div>
               </section>
             </section>
-            <section className="[ skill-card box stack ]">
-              <header className="[ stack ]">
+            <section className="[ skill-card box ]">
+              <header className="[ stack box ]">
                 <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                   <Icon path={mdiServer} />
                 </div>
                 <h4>Back-end Developer</h4>
               </header>
-              <section className="skill-stack">
+              <section className="skill-stack stack box">
+                <p>
+                  When it comes to designing APIs or database schemas I look for
+                  solutions that are fast and secure.
+                </p>
                 <div className="[ cluster ]">
                   <ul>
                     <li>
@@ -212,14 +223,18 @@ const WorkOverview = (): ReactElement => {
                 </div>
               </section>
             </section>
-            <section className="[ skill-card box stack ]">
-              <header className="[ stack ]">
+            <section className="[ skill-card box ]">
+              <header className="[ stack box ]">
                 <div className="[ icon-bg circle bg-neutral-800 text-neutral-100 ]">
                   <Icon path={mdiTools} />
                 </div>
                 <h4>Other Tools</h4>
               </header>
-              <section className="skill-stack">
+              <section className="skill-stack stack box">
+                <p>
+                  I love technology and learning to work with all kinds of
+                  environments and tools.
+                </p>
                 <div className="[ cluster ]">
                   <ul>
                     <li>
@@ -237,6 +252,17 @@ const WorkOverview = (): ReactElement => {
                     <li>
                       <Icon path={mdiMicrosoftVisualStudioCode} />
                       VS Code
+                    </li>
+                    <li>
+                      <Icon path={mdiBash} />
+                      Bash
+                    </li>
+                    <li>Figma</li>
+                    <li>Inkscape</li>
+                    <li>Gimp</li>
+                    <li>
+                      <Icon path={mdiNpm} />
+                      NPM
                     </li>
                   </ul>
                 </div>
