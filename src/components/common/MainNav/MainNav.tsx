@@ -14,7 +14,7 @@ const MainNav = ({ presEntryProp }: mainNavProps): ReactElement | null => (
     } with-sidebar pad-s-1-all background-fade ]`}
   >
     <div className="intermediary-wrapper">
-      <nav className="[ navbar cluster ]">
+      <nav className="[ navbar cluster content ]">
         <ul>
           <li>
             <h2>Work</h2>
@@ -27,7 +27,7 @@ const MainNav = ({ presEntryProp }: mainNavProps): ReactElement | null => (
           </li>
         </ul>
       </nav>
-      <aside className="[ navbar socials sidebar cluster ]">
+      <aside className="[ navbar socials cluster ]">
         <ul>
           <li>
             <Icon path={mdiLinkedin} />

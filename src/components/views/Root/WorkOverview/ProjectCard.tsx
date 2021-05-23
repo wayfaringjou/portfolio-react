@@ -1,27 +1,48 @@
 import * as React from 'react';
 
-const ProjectCard = (): React.ReactElement => {
-  const
+type ProjectCardProps = {
+  node: {
+    name: string;
+    description: string;
+    homepageUrl: string;
+    url: string;
+    openGraphImageUrl: string;
+    languages: {
+      nodes: Array<{
+        name: string;
+      }>;
+    };
+    repositoryTopics: {
+      nodes: Array<{
+        topic: {
+          name: string;
+        };
+      }>;
+    };
+  };
+};
+
+const ProjectCard = ({ node }: ProjectCardProps): React.ReactElement => {
+  const {
+    name, description, url, languages, repositoryTopics,
+  } = node;
   return (
-    <article key={node.name} className="project-card">
+    <article key={name} className="project-card">
       <figure>
-        <img
-          alt={node.name}
-          src={`${node.url}/raw/main/screens/portfolio.png`}
-        />
+        <img alt={name} src={`${url}/raw/main/screens/portfolio.png`} />
         <figcaption>
           <header>
-            <h3>{node.name}</h3>
+            <h3>{name}</h3>
           </header>
-          <p>{node.description}</p>
+          <p>{description}</p>
           <section className="tech-stack">
             <div className="int-wrapper">
-              {[...node.repositoryTopics.nodes].map((item) => (
+              {[...repositoryTopics.nodes].map((item) => (
                 <span key={item.topic.name} className="tech-pill">
                   {item.topic.name}
                 </span>
               ))}
-              {[...node.languages.nodes].map((item) => (
+              {[...languages.nodes].map((item) => (
                 <span key={item.name} className="tech-pill">
                   {item.name}
                 </span>

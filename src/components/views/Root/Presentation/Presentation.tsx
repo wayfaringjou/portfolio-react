@@ -16,16 +16,6 @@ import {
 
 import dots from '../../../../img/dots.svg';
 
-/*
-{
-  "greeting": "Hi, I'm Joel.",
-  "intro": "I work with Javascript, React, Node.js, and other modern web development frameworks to create robust and functional web applications.",
-  "techIntro": "I'm a software engineer specialized in Javascript, React, Node.js and other modern web development frameworks.",
-  "characteristic": "I create web applications.",
-  "invitation": "Let's build something together."
-}
-*/
-
 type presentationProps = {
   presRef: React.Dispatch<React.SetStateAction<any>>;
 };
@@ -66,7 +56,7 @@ const Presentation = ({ presRef }: presentationProps): React.ReactElement => {
     <>
       <section className="[ banner ] [ box with-sidebar margin-s2-block-start ]">
         <div className="[ with-sidebar-intermediate ]">
-          <section className="[ illustration ]" ref={presRef}>
+          <section className="[ illustration content ]" ref={presRef}>
             <div
               style={{ backgroundImage: `url(${dots})` }}
               className="[ backdrop ] [ ]"
@@ -80,7 +70,7 @@ const Presentation = ({ presRef }: presentationProps): React.ReactElement => {
               <img src={contentOutline} alt="img" />
             </figure>
           </section>
-          <section className="[ invitation stack sidebar ]">
+          <section className="[ invitation stack ]">
             <h1 className="">Let&apos;s build something great together!</h1>
             <p>
               Looking for a web developer for your team? I&apos;d be glad to
@@ -99,7 +89,13 @@ const Presentation = ({ presRef }: presentationProps): React.ReactElement => {
 
       <section className="[ intro ] [ box stack ]">
         <div className="[ frame margin-s2-block-start wave-decoration ]">
-          <img className="[ circle ]" width="460px" height="460px" alt="It's Joel" src={avatar} />
+          <img
+            className="[ circle ]"
+            width="460px"
+            height="460px"
+            alt="It's Joel"
+            src={avatar}
+          />
         </div>
         <div className="[ dots-decoration ]">
           <div className="[ box stack shifted ]">
