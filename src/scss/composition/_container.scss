@@ -1,0 +1,19 @@
+@use 'breakpoints';
+
+.container {
+  width: 100%;
+  max-width: 45em;
+  padding-right: var(--s1);
+  padding-left: var(--s1);
+  margin-right: auto;
+  margin-left: auto;
+  @include breakpoints.mq(lg) {
+    max-width: 60em;
+  }
+  @include breakpoints.mq(xl) {
+    max-width: 75em;
+  }
+  @include breakpoints.mq(xxl) {
+    max-width: 87.5em;
+  }
+}

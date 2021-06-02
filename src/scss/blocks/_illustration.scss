@@ -1,6 +1,9 @@
 .illustration {
   height: auto;
   min-height: 28vh;
+  min-height: min(520px, 100vw);
+  /* background-image: url('/img/dots-dark.svg'); */
+  background-size: 7px;
 }
 
 .illustration > .backdrop {

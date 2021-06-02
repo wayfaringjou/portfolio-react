@@ -1,8 +1,13 @@
+@use '../composition/breakpoints';
+
 .exploded {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 380px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -14,6 +19,24 @@
   height: 100%;
   transition: all ease 500ms;
   transform-style: preserve-3d;
+}
+
+.exploded::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  width: min(520px, calc(100vw - 2rem));
+  height: min(520px, calc(100vw - 2rem));
+  border-radius: 50%;
+  background-color: var(--clr-accent-400);
+  transform: translate(-50%, -50%);
+  transition: all ease 400ms;
+  @include breakpoints.mq(md) {
+    transform: translate(-25%, -50%);
+  }
 }
 
 @mixin explode($x, $y, $z, $rotX, $rotY, $rotZ, $modX, $modY, $modZ, $layers) {
@@ -53,6 +76,10 @@
 }
 
 @include explode(0, 0, 0, 20, 30, -10, 0, 0, 8, 6);
+
+@include breakpoints.mq(sm) {
+  @include explode(0, 0, 0, 20, 30, -10, 0, 0, 20, 6);
+}
 
 .exploded:hover img {
   transform: scale(1);

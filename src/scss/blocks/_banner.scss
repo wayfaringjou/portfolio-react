@@ -6,10 +6,35 @@
   position: relative;
 }
 
+.banner .invitation.cover {
+  padding: 0;
+  min-height: unset;
+}
+
+.banner .stack {
+  --space: var(--s2);
+}
+
 .banner button {
+  font-size: var(--ts2);
+  height: calc(var(--s1) * 2.25);
+}
+
+.banner button > svg {
+  width: var(--ts2);
+  height: var(--ts2);
 }
 
 .banner.with-sidebar {
-  --content-min-width: calc(var(--Phi) * 100%);
-  --side-width: 38ch;
+  --content-min-width: min(45ch, calc(100vw - 2rem));
+  --side-width: min(520px, calc(100vw - 2rem));
+  overflow: visible;
+}
+
+.banner.with-sidebar > * {
+  margin: calc(var(--s2) / 2 * -1);
+}
+
+.banner.with-sidebar > * > * {
+  margin: calc(var(--s2) / 2);
 }

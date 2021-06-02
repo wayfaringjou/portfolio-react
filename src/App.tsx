@@ -103,7 +103,7 @@ const App = (): React.ReactElement => {
   }
   */
   return (
-    <div className=" [ App ] [ sunset ] ">
+    <div className=" [ App ] [ ] ">
       <Switch>
         <Route exact path="/" component={Root} />
       </Switch>

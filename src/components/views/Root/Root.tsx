@@ -30,13 +30,7 @@ const Root = (): React.ReactElement => {
   const [presRef, presEntry] = useInterserctionObserver(observerOptions);
 
   return (
-    <article
-      id="portfolio-root"
-      className="[ main-grid bg-circle ]"
-      style={{
-        backgroundImage: `url(${circle})`,
-      }}
-    >
+    <article id="portfolio-root" className="[ root-container ]">
       <MainNav presEntryProp={presEntry} />
       <Presentation presRef={presRef} />
       <WorkOverview />
