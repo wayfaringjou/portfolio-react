@@ -8,6 +8,7 @@ import Footer from '../../common/Footer';
 import circle from '../../../img/circle.svg';
 
 import useInterserctionObserver from '../../../hooks/useIntersectionObserver';
+import Introduction from './Introduction/Introduction';
 
 /*
 const observerOptions = {
@@ -33,6 +34,7 @@ const Root = (): React.ReactElement => {
     <article id="portfolio-root" className="[ root-container ]">
       <MainNav presEntryProp={presEntry} />
       <Presentation presRef={presRef} />
+      <Introduction />
       <WorkOverview />
       <About />
       <Contact />

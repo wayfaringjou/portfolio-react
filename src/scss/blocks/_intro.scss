@@ -10,12 +10,38 @@
   }
 }
 
-.intro > .frame > img {
+.intro img {
   /* width: calc(var(--aspect-num) / var(--aspect-den) * 100%); */
-  margin: auto;
-  width: 230px;
-  height: 230px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(230px, calc(100vw - (var(--s0) * 2 + var(--s1) * 2)));
+  height: auto;
+}
+
+.intro.shifted {
+  --background: var(--clr-neutral-800);
+  --border: var(--clr-neutral-900);
 }
 
 .intro button {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+  font-size: var(--ts1);
+  height: calc(var(--s1) * 2);
+}
+
+.intro button > svg {
+  width: var(--ts1);
+  height: var(--ts1);
+}
+
+.intro.with-sidebar {
+  --content-min-width: 25ch;
+  --side-width: 400px;
+  overflow: visible;
+}
+
+.intro {
+  color: var(--clr-neutral-100);
 }

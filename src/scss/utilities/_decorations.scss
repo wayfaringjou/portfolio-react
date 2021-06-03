@@ -16,8 +16,8 @@
     transform: translateX(0px) translateY(0px);
     border-radius: var(--s-3);
   }
-  * {
-    position: relative;
+  > * {
+    position: inherit;
   }
   &::after {
     content: '';
@@ -31,5 +31,40 @@
     right: 0;
     transform: translateX(-10px) translateY(-10px);
     border-radius: var(--s-3);
+  }
+}
+
+.wave-decoration {
+  position: relative;
+
+  > * {
+    position: inherit;
+  }
+
+  &::before {
+    content: '';
+    background: url('/img/wave-circle.svg') 0px 0px;
+    /* background-color: var(--clr-primary-500);
+    border-radius: 50%; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: min(300px, calc(100vw - var(--s0) * 2));
+    height: min(300px, calc(100vw - var(--s0) * 2));
+    top: 50%;
+    left: 50%;
+    transform: translateX(-70%) translateY(-38%);
+  }
+
+  &::after {
+    content: '';
+    width: min(220px, calc(65vw - var(--s0) * 2));
+    height: min(220px, calc(65vw - var(--s0) * 2));
+    border: dashed var(--clr-accent-400);
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-58%) translateY(-58%);
   }
 }
