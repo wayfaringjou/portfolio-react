@@ -56,42 +56,6 @@ const About = (): React.ReactElement => {
           </div>
         </section>
       </section>
-      <section
-        ref={context?.refs.interestsRef}
-        className="[ about-more stack ]"
-      >
-        <header className="[ subsection-header ]">
-          <h3>A bit more about me...</h3>
-        </header>
-        <section className="[ interests ] [ stack ]">
-          {/* <div className="[ interests-images ]">
-              <img alt="Pine grove beach in Carolina, Puerto Rico" src={beach} />
-              <img alt="My guitar" src={guitar} />
-              <img alt="My bike" src={bike} />
-              <img alt="Juan Diego fall in El Yunque" src={yunque} />
-            </div> */}
-
-          <section className="[ interests-description ][ box margin-s1-all ]">
-            <img alt="my-interests" src={interests1} />
-            <img alt="my-interests" src={interests2} />
-
-            <div className="[ description-text ][ stack box bg-neutral-100 ]">
-              <header>
-                <h4>Interests</h4>
-              </header>
-              <p>
-                I often find inspiration in nature. I love hiking and going to
-                the beach. I also enjoy going for a ride on my bike and playing
-                guitar.
-              </p>
-            </div>
-            <img alt="my-interests" src={interests3} />
-            <img alt="my-interests" src={interests4} />
-            <img alt="my-interests" src={interests5} />
-            <img alt="my-interests" src={interests6} />
-          </section>
-        </section>
-      </section>
       <section className="[ testimonial stack ]">
         <header>
           <h4>Testimonial</h4>

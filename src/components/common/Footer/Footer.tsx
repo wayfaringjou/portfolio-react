@@ -2,7 +2,7 @@ import * as React from 'react';
 import sunset from '../../../img/sunset.svg';
 
 const Footer = (): React.ReactElement => (
-  <footer className="[ pad-s2-block-start box ]">
+  <footer className="[ pad-s2-block-start box  bg-neutral-900 ]">
     <section>
       <p className="[ caption ]">
         ©2021-present Joel Del Cueto. All Rights Reserved

@@ -53,7 +53,11 @@ const Introduction = (): React.ReactElement => {
           <div className="[ content ]">
             <div className="[ box stack ]">
               <h2 className="[ card-title ]">Hi! I&apos;m Joel,</h2>
-              <p className="[ card-caption ts2 ]">{intro}</p>
+              <p className="[ card-caption ts2 ]">
+                {`${intro} You're welcome to browse my projects, 
+                learn a bit about me, 
+                and how to contact me. You can also grab a copy of my resume:`}
+              </p>
               <button type="button" className="[ icon contained ]">
                 <Icon path={mdiFileAccount} />
                 My resume
